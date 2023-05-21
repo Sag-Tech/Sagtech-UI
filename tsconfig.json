@@ -51,11 +51,14 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "jest.setup.js"
+    "jest.setup.js",
+    "tailwind.config.js",
+    "postcss.config.js",
+    "craco.config.js"
   ],
   "exclude": [
     "node_modules",
     "**/*.spec.ts",
-    "**/*.test.ts"
+    "**/*.test.ts",
   ]
 }

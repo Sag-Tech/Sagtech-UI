@@ -27,5 +27,10 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:storybook/recommended"
   ],
-  "rules": {}
+  "rules": {},
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }
