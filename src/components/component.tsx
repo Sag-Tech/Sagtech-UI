@@ -1,7 +1,6 @@
 import React from 'react'
 import '../styles/tailwind.css'
 
-
 const MyComponent = (): React.ReactElement => {
   return (
     <div>

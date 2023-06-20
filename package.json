@@ -39,11 +39,10 @@
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
     "@craco/craco": "^7.1.0",
-    "assets": "^3.0.1",
-    "icons": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
+    "svgo": "^3.0.2",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
@@ -80,6 +79,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-storybook": "^0.6.12",
+    "file-loader": "^6.2.0",
     "husky": "^8.0.3",
     "jest": "^27.5.1",
     "lint-staged": "^13.2.2",
