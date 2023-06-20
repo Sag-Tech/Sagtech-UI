@@ -1,10 +1,5 @@
-
-module.exports = {
-  content: ['./src/**/*.{ts,tsx}'],
-  theme: {
-    extend: {},
-    colors: {
-      black_1: '#070715',
+ const colors = {
+    black_1: '#070715',
     black_2: '#20202D',
     black_3: '#393944',
     black_4: '#51515B',
@@ -28,7 +23,7 @@ module.exports = {
     shape_stroke_1_part_two: '#221546',
     shape_stroke_2_part_one: '#1F1F38',
     shape_stroke_2_part_two: '#2F1E5E',
-    }
-  },
-  plugins: []
-}
+
+  }
+
+  export type TColorsValues = keyof typeof colors;
