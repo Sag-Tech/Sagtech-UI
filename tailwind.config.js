@@ -41,11 +41,22 @@ module.exports = {
     spacing: {
       '40px': '40px',
       '16px': '16px',
-      '4px': '4px'
+      '4px': '4px',
+      '8px': '8px'
     },
 
     dropShadow: {
       '3xl': '0px 0px 4px rgba(255, 255, 255, 0.64)'
+    },
+
+    gap: {
+      '8px': '8px'
+    },
+    borderWidth: {
+      6: '6px'
+    },
+    boxShadow: {
+      '3xl': '0px 0px 16px 0px rgba(109, 62, 241, 0.24)'
     }
   },
   plugins: []
