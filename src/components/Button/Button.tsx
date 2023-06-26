@@ -1,65 +1,53 @@
-import React from 'react'
+import React, { useMemo, type ButtonHTMLAttributes, type DetailedHTMLProps } from 'react'
 
 import '../../styles/tailwind.css'
 
 import { Icon } from '@components/IconComponent/Icon'
 
-interface ButtonTypes {
-  type?: 'submit' | 'button'
-  disabled?: boolean
+import buttonConst from './ButtonConst/ButtonConst'
+
+import classNames from 'classnames'
+
+interface ButtonTypes extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   loadingType?: boolean
-  onClick?: () => void
-  children?: React.ReactNode
+  text?: React.ReactNode
   buttonSize?: 'small' | 'large' | 'tabSize'
   variant?: 'primary' | 'secondary' | 'tabButton'
   useIcon?: boolean
   stateOfButton?: 'default' | 'active'
 }
 
-const Button: React.FC<ButtonTypes> = ({ children, disabled, buttonSize, loadingType, variant, useIcon, stateOfButton, ...rest }) => {
-  const loadingCheck = loadingType === true
-  const basicStyles = 'leading-24 flex justify-center items-center gap-8px  font-bold rounded-[16px] font-["Manrope"]   '
-  const primaryButton = 'border-black_1 border-solid  bg-pr_purple   text-white  transition-all duration-800 '
-  const tabButtonBase = 'leading-24 flex justify-center items-center gap-8px text-14 font-["Manrope"] px-16px py-8px rounded-[50px] transition-all duration-800'
-  const tabButtonDefault = `${stateOfButton === 'default' ? 'text-grey_4  border-[1px] border-solid border-grey_4 rounded-[50px] transition-all duration-800' : ''}`
-  const tabButtonActive = `${stateOfButton === 'active' ? 'bg-pr_purple border-none text-white_4' : ''}`
-  const tabButtonDisabled = 'disabled:border-grey_2 disabled:text-grey_2'
-  const smallSize = 'py-4px px-16px text-14 rounded-[50px]'
-  const largeSize = 'py-16px px-40px text-16 '
-  const hoverAnimation = `${buttonSize === 'large' && disabled === false && variant === 'primary' && !loadingCheck ? 'hover:border-[6px] hover:border-solid hover:border-black_1 hover:shadow-3xl hover:transition-all hover:duration-300' : ''}`
-  const primaryDisabledStyles = 'disabled:bg-[#545259] disabled:text-grey_2'
-  const secondaryDisabledStyles = 'disabled:border-grey_2 disabled:text-grey_2'
-  const loadingPrimary = 'bg-[#545259] text-grey_2'
-  const loadingSecondary = 'border-grey_2 text-grey_2'
-  const secondaryButton = 'border-[2px] border-solid border-white bg-none  text-white'
-  const primaryCheck = variant === 'primary'
-  const secondaryCheck = variant === 'secondary'
-  const tabButtonCheck = variant === 'tabButton'
-  const tabButtonHover = `${tabButtonCheck ? 'hover:border-white_4 hover:text-white_4 hover:transition-all hover:duration-800' : ''}`
-  const secondaryAnimation = `${secondaryCheck && buttonSize === 'large' && disabled === false && !loadingCheck ? 'hover:drop-shadow-3xl' : ''}`
-  const allclasses = `
-  ${tabButtonCheck ? tabButtonActive : ''}
-  ${tabButtonCheck ? tabButtonDefault : ''}
-  ${variant === 'primary' && !loadingCheck ? primaryButton : ''}
-  ${tabButtonCheck ? tabButtonBase : ''}
-  ${hoverAnimation}
-  ${tabButtonHover}
-  ${secondaryAnimation}
-  ${!tabButtonCheck ? basicStyles : ''}
-  ${primaryCheck ? primaryDisabledStyles : ''}
-  ${primaryCheck && loadingCheck ? loadingPrimary : ''}
-  ${tabButtonCheck ? tabButtonDisabled : ''}
-  ${secondaryCheck && disabled === true ? secondaryDisabledStyles : ''}
-  ${secondaryCheck && loadingCheck ? loadingSecondary : ''}
-  ${buttonSize === 'small' ? smallSize : ''}
-  ${buttonSize === 'large' ? largeSize : ''}
-  ${secondaryCheck && !loadingCheck ? secondaryButton : ''}
- `
+const Button: React.FC<ButtonTypes> = ({ text, disabled, buttonSize, loadingType, variant, useIcon, stateOfButton, ...rest }) => {
+  const buttonClasses = classNames({
+    [buttonConst.tabButtonActive]: variant === 'tabButton' && stateOfButton === 'active' && !(disabled ?? false),
+    [buttonConst.tabButtonDefault]: variant === 'tabButton' && stateOfButton === 'default' && !(disabled ?? false),
+    [buttonConst.primaryButton]: variant === 'primary' && loadingType !== true,
+    [buttonConst.tabButtonBase]: variant === 'tabButton',
+    [buttonConst.secondaryButton]: variant === 'secondary' && loadingType !== true,
+    [buttonConst.hoverAnimation]: buttonSize === 'large' && !(disabled ?? false) && variant === 'primary' && loadingType !== true,
+    [buttonConst.secondaryAnimation]: variant === 'secondary' && buttonSize === 'large' && !(disabled ?? false) && loadingType !== true,
+    [buttonConst.tabButtonHover]: variant === 'tabButton',
+    [buttonConst.basicStyles]: variant !== 'tabButton',
+    [buttonConst.primaryDisabledStyles]: variant === 'primary',
+    [buttonConst.loadingPrimary]: variant === 'primary' && loadingType,
+    [buttonConst.tabButtonDisabled]: variant === 'tabButton' && disabled,
+    [buttonConst.secondaryDisabledStyles]: variant === 'secondary' && disabled,
+    [buttonConst.loadingSecondary]: variant === 'secondary' && loadingType,
+    [buttonConst.smallSize]: buttonSize === 'small',
+    [buttonConst.largeSize]: buttonSize === 'large'
+  })
+
+  const iconComponent = useMemo(() => {
+    if ((useIcon ?? false)) {
+      return <Icon icon={ !(loadingType ?? false) ? 'project' : 'loading'} size={buttonSize === 'small' ? 18 : undefined} />
+    }
+    return null
+  }, [useIcon, loadingType, buttonSize])
+
   return (
-        <button type='button' disabled={disabled}
-         className={allclasses} {...rest} >
-          {useIcon === true && <Icon icon={loadingCheck ? 'loading' : 'project'} size={buttonSize === 'small' && !loadingCheck ? 18 : undefined}/>}
-            {children}
+        <button className={buttonClasses} disabled={disabled} {...rest} >
+            {iconComponent}
+            {text}
         </button>
   )
 }

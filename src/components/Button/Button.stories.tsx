@@ -13,7 +13,7 @@ export const Primary = Template.bind({})
 
 Primary.args = {
   variant: 'primary',
-  children: 'Button',
+  text: 'Button',
   buttonSize: 'large',
   type: 'button',
   disabled: false,
@@ -27,7 +27,7 @@ export const Secondary = secondTemplate.bind({})
 
 Secondary.args = {
   variant: 'secondary',
-  children: 'Button',
+  text: 'Button',
   buttonSize: 'large',
   type: 'button',
   disabled: false,
@@ -41,7 +41,7 @@ export const Tab = thirdTemplate.bind({})
 
 Tab.args = {
   variant: 'tabButton',
-  children: 'Button',
+  text: 'Button',
   buttonSize: 'tabSize',
   type: 'button',
   disabled: false,
