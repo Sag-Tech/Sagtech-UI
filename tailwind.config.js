@@ -77,7 +77,11 @@ module.exports = {
     },
     inset: {
       '24px': '24px',
-      '8px': '8px'
+      '8px': '8px',
+      '43px': '43px'
+    },
+    zIndex: {
+      5: '5'
     }
   },
   plugins: []
