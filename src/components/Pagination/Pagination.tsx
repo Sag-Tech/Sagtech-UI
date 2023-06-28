@@ -11,14 +11,12 @@ import classNames from 'classnames'
 interface PaginationType extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   children?: React.ReactNode
   state?: 'default' | 'active' | 'disabled'
-  arrowPosition?: 'left' | 'right'
 }
 
 const Pagination: React.FC<PaginationType> = ({
   children,
   state,
   disabled,
-  arrowPosition,
   ...rest
 }) => {
   const [hover, setHover] = useState(false)
@@ -53,7 +51,7 @@ const Pagination: React.FC<PaginationType> = ({
       {...rest}
     >
       <span className='w-[24px]'>{children}</span>
-      <Icon icon='paginatioArrow' color={iconColors} className={`${arrowPosition === 'right' ? 'rotate-180' : ''}`} />
+      <Icon icon='paginatioArrow' color={iconColors} />
     </button>
   )
 }

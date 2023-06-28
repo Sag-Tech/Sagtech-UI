@@ -5,7 +5,6 @@ import { ReactComponent as Attach } from './attach.svg'
 import { ReactComponent as Pagination } from './paginatioArrow.svg'
 import { ReactComponent as Success } from './success.svg'
 import { ReactComponent as Error } from './error.svg'
-import { ReactComponent as ChevronDown } from './chevronDown.svg'
 
 export const content = {
   loading: Loading,
@@ -14,8 +13,7 @@ export const content = {
   attach: Attach,
   paginatioArrow: Pagination,
   success: Success,
-  error: Error,
-  chevronDown: ChevronDown
+  error: Error
 }
 
 export type IAvailableIcons = keyof typeof content
