@@ -12,6 +12,5 @@ const Template: StoryFn = (arg) => <AnimationButton {...arg}/>
 export const Animate = Template.bind({})
 
 Animate.args = {
-  children: 'Animate button',
-  type: 'button'
+  text: 'Animate button'
 }

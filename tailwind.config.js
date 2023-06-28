@@ -67,7 +67,8 @@ module.exports = {
     },
     boxShadow: {
       '3xl': '0px 0px 16px 0px rgba(109, 62, 241, 0.24)',
-      '4xl': '0px -8px 24px 0px rgba(255, 255, 255, 0.04)'
+      '4xl': '0px -8px 24px 0px rgba(255, 255, 255, 0.04)',
+      '5xl': '0px 0px 4px 0px rgba(109, 62, 241, 0.64)'
     },
     borderRadius: {
       circle: '50px',

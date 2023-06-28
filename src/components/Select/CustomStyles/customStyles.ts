@@ -3,7 +3,6 @@ import { type StylesConfig } from 'react-select'
 const getCustomStyles = (
   state: 'default' | 'active' | 'error'
 ): StylesConfig => {
-  console.log(state)
   return {
     control: (styles, { isDisabled, menuIsOpen }) => {
       let borderColor
@@ -24,8 +23,8 @@ const getCustomStyles = (
         transition: '0.35s',
         display: 'block',
         background: '#070715',
-        cursor: 'pointer',
         boxShadow: 'none',
+        cursor: 'pointer',
         '& .react-select__indicators': {
           position: 'absolute',
           top: '16px',
@@ -43,7 +42,7 @@ const getCustomStyles = (
           })
         },
         padding: menuIsOpen ? '23px 24px 8px 24px' : '16px 24px 16px 24px',
-        ...(menuIsOpen && { boxShadow: 'none' }),
+        ...(menuIsOpen && { boxShadow: '0px 0px 4px 0px rgba(109, 62, 241, 0.64)' }),
         '&:hover': {
           borderColor: 'none'
         }
@@ -58,7 +57,8 @@ const getCustomStyles = (
       borderStyle: 'solid',
       borderColor: '#6D3EF1',
       padding: '8px',
-      animation: 'scaleIn 0.35s ease-in-out'
+      animation: 'scaleIn 0.35s ease-in-out',
+      boxShadow: '0px 0px 4px 0px rgba(109, 62, 241, 0.64)'
     }),
     option: (styles, { isSelected, isDisabled }) => {
       let color
