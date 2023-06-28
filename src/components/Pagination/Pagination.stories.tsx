@@ -15,7 +15,8 @@ PaginationDefault.args = {
   children: '1',
   type: 'button',
   state: 'default',
-  disabled: false
+  disabled: false,
+  arrowPosition: 'left'
 }
 
 const PaginationActive: StoryFn = (arg) => <Pagination {...arg}/>
@@ -26,7 +27,8 @@ PagActive.args = {
   children: '1',
   type: 'button',
   state: 'active',
-  disabled: false
+  disabled: false,
+  arrowPosition: 'right'
 }
 
 const PaginationDisabled: StoryFn = (arg) => <Pagination {...arg}/>
@@ -37,5 +39,6 @@ PagDisabled.args = {
   children: '1',
   type: 'button',
   disabled: true,
-  state: 'disabled'
+  state: 'disabled',
+  arrowPosition: 'right'
 }
