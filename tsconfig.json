@@ -22,12 +22,6 @@
     "alwaysStrict": true,
     "baseUrl": ".",
     "paths": {
-      "@assets/*": [
-        "src/assets/*"
-      ],
-      "@assets": [
-        "src/assets"
-      ],
       "@components/*": [
         "src/components/*"
       ],
@@ -46,6 +40,7 @@
       "@hooks": [
         "src/hooks"
       ],
+      "@svgs/*": ["src/assets/icons/*"]
     }
   },
   "include": [
@@ -54,8 +49,8 @@
     "jest.setup.js",
     "tailwind.config.js",
     "postcss.config.js",
-    "craco.config.js"
-  ],
+    "craco.config.js",
+   ],
   "exclude": [
     "node_modules",
     "**/*.spec.ts",

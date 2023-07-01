@@ -1,44 +1,49 @@
-import React from 'react'
+import React, { useMemo, type ButtonHTMLAttributes, type DetailedHTMLProps } from 'react'
+import '../../styles/globals.css'
+import { Icon } from '@components/IconComponent/Icon'
+import buttonConst from './ButtonConst/ButtonConst'
+import classNames from 'classnames'
 
-import '../../styles/tailwind.css'
-
-interface ButtonTypes {
-  type?: 'submit' | 'button'
-  className?: string
-  disabled?: boolean
-  onClick?: () => void
-  children?: React.ReactNode
-  buttonSize?: 'small' | 'large'
-  variant?: 'primary' | 'secondary'
+interface ButtonTypes extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+  loadingType?: boolean
+  text?: React.ReactNode
+  buttonSize?: 'small' | 'large' | 'tabSize'
+  variant?: 'primary' | 'secondary' | 'tabButton'
+  useIcon?: boolean
+  stateOfButton?: 'default' | 'active'
 }
 
-const Button: React.FC<ButtonTypes> = ({ children, disabled, buttonSize, variant, ...rest }) => {
-  const basicStyles = 'leading-24  text-white font-bold rounded-[16px] font-["Manrope"]  transition-all duration-800 '
-  const primaryButton = 'bg-pr_purple'
-  const smallSize = 'py-4px px-16px text-14'
-  const largeSize = 'py-16px px-40px text-16 '
-  const hoverAnimation = `${buttonSize === 'large' && disabled === false && variant === 'primary' ? 'hover:border-[6px] hover:border-solid hover:border-black_1 hover:transition-all hover:duration-800 ' : ''}`
-  const primaryDisabledStyles = 'disabled:bg-[#545259] disabled:text-grey_2'
-  const secondaryDisabledStyles = 'disabled:border-grey_2 disabled:text-grey_2'
-  const secondaryButton = 'border-[2px] border-solid border-white bg-none '
-  const primaryCheck = variant === 'primary'
-  const secondaryCheck = variant === 'secondary'
-  const secondaryAnimation = `${secondaryCheck && buttonSize === 'large' && disabled === false ? 'hover:drop-shadow-3xl hover:transition-all hover:duration-800' : ''}`
+const Button: React.FC<ButtonTypes> = ({ text, disabled, buttonSize, loadingType, variant, useIcon, stateOfButton, ...rest }) => {
+  const buttonClasses = classNames({
+    [buttonConst.tabButtonActive]: variant === 'tabButton' && stateOfButton === 'active' && !(disabled ?? false),
+    [buttonConst.tabButtonDefault]: variant === 'tabButton' && stateOfButton === 'default' && !(disabled ?? false),
+    [buttonConst.primaryButton]: variant === 'primary' && loadingType !== true,
+    [buttonConst.tabButtonBase]: variant === 'tabButton',
+    [buttonConst.secondaryButton]: variant === 'secondary' && loadingType !== true,
+    [buttonConst.hoverAnimation]: buttonSize === 'large' && !(disabled ?? false) && variant === 'primary' && loadingType !== true,
+    [buttonConst.secondaryAnimation]: variant === 'secondary' && buttonSize === 'large' && !(disabled ?? false) && loadingType !== true,
+    [buttonConst.tabButtonHover]: variant === 'tabButton',
+    [buttonConst.basicStyles]: variant !== 'tabButton',
+    [buttonConst.primaryDisabledStyles]: variant === 'primary',
+    [buttonConst.loadingPrimary]: variant === 'primary' && loadingType,
+    [buttonConst.tabButtonDisabled]: variant === 'tabButton' && disabled,
+    [buttonConst.secondaryDisabledStyles]: variant === 'secondary' && disabled,
+    [buttonConst.loadingSecondary]: variant === 'secondary' && loadingType,
+    [buttonConst.smallSize]: buttonSize === 'small',
+    [buttonConst.largeSize]: buttonSize === 'large'
+  })
 
-  const allclasses = `
-  ${variant === 'primary' ? primaryButton : ''}
-  ${hoverAnimation}
-  ${secondaryAnimation}
-  ${basicStyles}
-  ${primaryCheck ? primaryDisabledStyles : ''}
-  ${secondaryCheck && disabled === true ? secondaryDisabledStyles : ''}
-  ${buttonSize === 'small' ? smallSize : largeSize}
-  ${secondaryCheck ? secondaryButton : ''}
- `
+  const iconComponent = useMemo(() => {
+    if ((useIcon ?? false)) {
+      return <Icon icon={ !(loadingType ?? false) ? 'project' : 'loading'} size={buttonSize === 'small' ? 18 : undefined} />
+    }
+    return null
+  }, [useIcon, loadingType, buttonSize])
+
   return (
-        <button type='button' disabled={disabled}
-         className={allclasses} {...rest} >
-            {children}
+        <button className={buttonClasses} disabled={disabled} {...rest} >
+            {iconComponent}
+            {text}
         </button>
   )
 }

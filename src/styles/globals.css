@@ -2,12 +2,13 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 @import './Fonts/fonts.css';
+@import './animations/animations.css';
 
 html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Orbitron', 'Manrope',  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    font-family: 'Manrope', 'Orbitron',  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }

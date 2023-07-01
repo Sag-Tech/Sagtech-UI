@@ -1,5 +1,4 @@
 import { type Meta, type StoryFn } from '@storybook/react'
-
 import Button from './Button'
 
 export default {
@@ -13,20 +12,38 @@ export const Primary = Template.bind({})
 
 Primary.args = {
   variant: 'primary',
-  children: 'Button',
+  text: 'Button',
   buttonSize: 'large',
   type: 'button',
-  disabled: false
+  disabled: false,
+  loadingType: false,
+  useIcon: true
 }
 
-const nwW: StoryFn = (arg) => <Button {...arg}/>
+const secondTemplate: StoryFn = (arg) => <Button {...arg}/>
 
-export const Secondary = nwW.bind({})
+export const Secondary = secondTemplate.bind({})
 
 Secondary.args = {
   variant: 'secondary',
-  children: 'Button',
+  text: 'Button',
   buttonSize: 'large',
   type: 'button',
-  disabled: false
+  disabled: false,
+  loadingType: false,
+  useIcon: true
+}
+
+const thirdTemplate: StoryFn = (arg) => <Button {...arg}/>
+
+export const Tab = thirdTemplate.bind({})
+
+Tab.args = {
+  variant: 'tabButton',
+  text: 'Button',
+  buttonSize: 'tabSize',
+  type: 'button',
+  disabled: false,
+  stateOfButton: 'default',
+  loadingType: false
 }

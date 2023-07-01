@@ -31,21 +31,58 @@ module.exports = {
 
     fontSize: {
       16: '16px',
-      14: '14px'
+      14: '14px',
+      12: '12px',
+      10: '10px'
     },
 
     lineHeight: {
-      24: '24px'
+      24: '24px',
+      16: '16px',
+      18: '18px',
+      28: '28px'
     },
 
     spacing: {
       '40px': '40px',
       '16px': '16px',
-      '4px': '4px'
+      '4px': '4px',
+      '8px': '8px',
+      '24px': '24px',
+      '23px': '23px'
     },
 
     dropShadow: {
       '3xl': '0px 0px 4px rgba(255, 255, 255, 0.64)'
+    },
+
+    gap: {
+      '8px': '8px',
+      '10px': '10px',
+      '12px': '12px',
+      '16px': '16px'
+    },
+    borderWidth: {
+      6: '6px'
+    },
+    boxShadow: {
+      '3xl': '0px 0px 16px 0px rgba(109, 62, 241, 0.24)',
+      '4xl': '0px -8px 24px 0px rgba(255, 255, 255, 0.04)',
+      '5xl': '0px 0px 4px 0px rgba(109, 62, 241, 0.64)'
+    },
+    borderRadius: {
+      circle: '50px',
+      '16px': '16px',
+      '8px': '8px',
+      '24px': '24px'
+    },
+    inset: {
+      '24px': '24px',
+      '43px': '43px',
+      '8px': '8px'
+    },
+    zIndex: {
+      5: '5'
     }
   },
   plugins: []
