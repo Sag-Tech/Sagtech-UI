@@ -1,11 +1,7 @@
 import React, { useMemo, type ButtonHTMLAttributes, type DetailedHTMLProps } from 'react'
-
-import '../../styles/tailwind.css'
-
+import '../../styles/globals.css'
 import { Icon } from '@components/IconComponent/Icon'
-
 import buttonConst from './ButtonConst/ButtonConst'
-
 import classNames from 'classnames'
 
 interface ButtonTypes extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {

@@ -1,5 +1,5 @@
 import React, { type ButtonHTMLAttributes, type DetailedHTMLProps } from 'react'
-import '../../styles/tailwind.css'
+import '../../styles/globals.css'
 import { Icon } from '@components/IconComponent/Icon'
 
 interface AnimateType extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {

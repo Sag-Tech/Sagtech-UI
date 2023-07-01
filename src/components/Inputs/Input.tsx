@@ -1,9 +1,6 @@
 import React, { type InputHTMLAttributes, type DetailedHTMLProps } from 'react'
-
-import '../../styles/tailwind.css'
-
+import '../../styles/globals.css'
 import inputConsts from './InputsConsts/inputConsts'
-
 import classNames from 'classnames'
 
 interface InputTypes extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {

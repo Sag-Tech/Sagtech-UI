@@ -1,13 +1,8 @@
 import React from 'react'
-
-import '../../styles/tailwind.css'
-
+import '../../styles/globals.css'
 import { Icon } from '@components/IconComponent/Icon'
-
 import Button from '@components/Button/Button'
-
 import notificationConsts from './NotificationConsts/notificationConsts'
-
 import classNames from 'classnames'
 
 interface NotificationTypes {

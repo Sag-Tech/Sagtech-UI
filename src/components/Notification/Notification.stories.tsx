@@ -1,5 +1,4 @@
 import { type Meta, type StoryFn } from '@storybook/react'
-
 import Notification from './Notification'
 
 export default {

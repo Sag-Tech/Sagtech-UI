@@ -1,5 +1,4 @@
 import { type Meta, type StoryFn } from '@storybook/react'
-
 import Attachment from './Attachment'
 
 export default {

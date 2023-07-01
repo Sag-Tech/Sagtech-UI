@@ -1,5 +1,4 @@
 import { type Meta, type StoryFn } from '@storybook/react'
-
 import Button from './Button'
 
 export default {

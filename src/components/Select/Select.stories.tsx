@@ -1,13 +1,21 @@
 import { type Meta, type StoryFn } from '@storybook/react'
-
 import SelectComponent from './SelectComponent'
+import { useState } from 'react'
 
 export default {
   title: 'Select',
   component: SelectComponent
 } satisfies Meta
 
-const Selectstory: StoryFn = (arg) => <SelectComponent {...arg}/>
+const Selectstory: StoryFn = (arg) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const handleMenuToggle = (): void => {
+    setIsMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen)
+  }
+
+  return <SelectComponent {...arg} isMenuOpen={isMenuOpen} onMenuToggle={handleMenuToggle} />
+}
 
 export const SelectError = Selectstory.bind({})
 
@@ -23,9 +31,7 @@ SelectError.args = {
   ]
 }
 
-const SelectstoryDefault: StoryFn = (arg) => <SelectComponent {...arg}/>
-
-export const SelectDefault = SelectstoryDefault.bind({})
+export const SelectDefault = Selectstory.bind({})
 
 SelectDefault.args = {
   state: 'default',

@@ -1,11 +1,7 @@
 import React, { useState, type InputHTMLAttributes, type DetailedHTMLProps } from 'react'
-
-import '../../styles/tailwind.css'
-
+import '../../styles/globals.css'
 import { Icon } from '@components/IconComponent/Icon'
-
 import attachmentConsts from './AttachmentConsts/attachmentConsts'
-
 import classNames from 'classnames'
 
 interface AttachmentTypes extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {

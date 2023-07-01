@@ -1,5 +1,4 @@
 import { type Meta, type StoryFn } from '@storybook/react'
-
 import Input from './Input'
 
 export default {
