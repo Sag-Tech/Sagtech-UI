@@ -1,10 +1,18 @@
-import React, { useState, type ButtonHTMLAttributes, type DetailedHTMLProps } from 'react'
+import React, {
+  useState,
+  type ButtonHTMLAttributes,
+  type DetailedHTMLProps
+} from 'react'
 import '../../styles/globals.css'
 import { Icon } from '@components/IconComponent/Icon'
 import paginationConsts from './PaginationConst/PaginationConst'
 import classNames from 'classnames'
 
-interface PaginationType extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+interface PaginationType
+  extends DetailedHTMLProps<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+  > {
   children?: React.ReactNode
   state?: 'default' | 'active' | 'disabled'
   arrowPosition?: 'left' | 'right'
@@ -28,7 +36,8 @@ const Pagination: React.FC<PaginationType> = ({
   }
 
   const buttonStyles = classNames({
-    [paginationConsts.defaultStyles]: state === 'default' && !(disabled ?? false),
+    [paginationConsts.defaultStyles]:
+      state === 'default' && !(disabled ?? false),
     [paginationConsts.animation]: hover,
     [paginationConsts.activeStyles]: state === 'active' && !(disabled ?? false),
     [paginationConsts.disabledStyles]: disabled,
@@ -51,8 +60,12 @@ const Pagination: React.FC<PaginationType> = ({
       disabled={disabled}
       {...rest}
     >
-      <span className='w-[24px]'>{children}</span>
-      <Icon icon='paginatioArrow' color={iconColors} className={arrowPosition === 'right' ? 'rotate-180' : ''} />
+      <span className="w-[24px]">{children}</span>
+      <Icon
+        icon="paginatioArrow"
+        color={iconColors}
+        className={arrowPosition === 'right' ? 'rotate-180' : ''}
+      />
     </button>
   )
 }
