@@ -22,13 +22,13 @@ const Notification: React.FC<NotificationTypes> = ({ title, text, size, buttonTe
 
   return (
         <div className={allStyles}>
-             <div className='mr-16px'>
+             <div className='mr-4'>
               <Icon icon={state === 'error' ? 'error' : 'success'} color='#F8F8F8'/>
              </div>
             <div>
-                <h3 className='text-16 text-white_4 font-semibold leading-24 pb-4px'>{title}</h3>
+                <h3 className='text-base text-white_4 font-semibold leading-6 pb-1'>{title}</h3>
                 <p className={notificationConsts.basicTextStyles}>{text}</p>
-                <div className='flex mt-16px gap-8px'>
+                <div className='flex mt-4 gap-8px'>
                     <Button buttonSize='small' variant='primary' useIcon text={buttonText} />
                     <Button buttonSize='small' variant='secondary' useIcon text={buttonText} />
                 </div>

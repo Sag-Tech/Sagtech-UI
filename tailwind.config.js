@@ -26,30 +26,8 @@ module.exports = {
       shape_stroke_1_part_one: '#0C0C1E',
       shape_stroke_1_part_two: '#221546',
       shape_stroke_2_part_one: '#1F1F38',
-      shape_stroke_2_part_two: '#2F1E5E'
-    },
-
-    fontSize: {
-      16: '16px',
-      14: '14px',
-      12: '12px',
-      10: '10px'
-    },
-
-    lineHeight: {
-      24: '24px',
-      16: '16px',
-      18: '18px',
-      28: '28px'
-    },
-
-    spacing: {
-      '40px': '40px',
-      '16px': '16px',
-      '4px': '4px',
-      '8px': '8px',
-      '24px': '24px',
-      '23px': '23px'
+      shape_stroke_2_part_two: '#2F1E5E',
+      backdrop: 'rgba(0, 0, 0, 0.56)'
     },
 
     dropShadow: {
@@ -74,15 +52,20 @@ module.exports = {
       circle: '50px',
       '16px': '16px',
       '8px': '8px',
-      '24px': '24px'
+      '24px': '24px',
+      '40px': '40px'
     },
     inset: {
       '24px': '24px',
       '43px': '43px',
-      '8px': '8px'
+      '8px': '8px',
+      '0px': '0px'
     },
     zIndex: {
       5: '5'
+    },
+    screens: {
+      sm: { max: '500px' }
     }
   },
   plugins: []

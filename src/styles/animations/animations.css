@@ -11,6 +11,10 @@
 }
 
 
+.modalAnim {
+  animation: slide-down 300ms ease-out forwards;
+}
+
 @keyframes scaleIn {
     0% {
         opacity: 0;
@@ -59,4 +63,15 @@
     width: 100%;
     transition: 0.789s;
     padding-left: 24px;
+  }
+
+@keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-3rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }

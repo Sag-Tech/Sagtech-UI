@@ -43,7 +43,7 @@ const SelectComponent: React.FC<CustomSelectProps> = ({ state, errorText, labelT
         onMenuOpen={onMenuToggle}
         onMenuClose={onMenuToggle}
         />
-       {state === 'error' && !(isMenuOpen ?? false) && !(disabled ?? false) && <p className='px-24px pt-4px text-12 leading-16 font-medium text-error'>{errorText}</p>}
+       {state === 'error' && !(isMenuOpen ?? false) && !(disabled ?? false) && <p className='px-6 pt-1 text-xs font-medium text-error'>{errorText}</p>}
       </div>
   )
 }
