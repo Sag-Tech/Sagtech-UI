@@ -24,10 +24,10 @@ const Input: React.FC<InputTypes> = ({ state, value, errorMessage, disabled, ...
   return (
       <>
         <div className='flex flex-col relative'>
-         {state === 'active' && <span className='text-10 absolute top-8px left-24px leading-16 font-medium text-grey_2 '>Label</span>}
+        {state === 'active' && <span className='text-[10px] absolute top-8px left-24px leading-4 font-medium text-grey_2 '>Label</span>}
         <input className={inputStyles} disabled={disabled} placeholder={value} {...rest} />
         </div>
-       {state === 'error' && <p className='px-24px pt-4px text-error text-12 font-medium leading-16'>{errorMessage}</p>}
+        {state === 'error' && <p className='px-6 pt-1 text-error font-medium text-xs'>{errorMessage}</p>}
       </>
   )
 }

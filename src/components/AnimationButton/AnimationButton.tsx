@@ -10,10 +10,10 @@ const AnimationButton: React.FC<AnimateType> = ({ text }) => {
   return (
    <div className='inline-block'>
       <button
-      className='buttonAnim  bg-pr_purple  px-8px py-8px items-center rounded-circle buttonAnims overflow-hidden'
+      className='buttonAnim  bg-pr_purple  px-2 py-2 items-center rounded-circle buttonAnims overflow-hidden'
     >
       <span
-        className='text-white  whitespace-nowrap animation font-["Manrope"] font-bold text-16 pr-16px leading-24 '
+        className='text-white  whitespace-nowrap animation font-["Manrope"] font-bold text-base pr-4'
       >
         {text}
       </span>
