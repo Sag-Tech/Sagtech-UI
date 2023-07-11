@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
-import Typography from 'src/styles/Fonts/variable'
 import FontConst from './FontConst/FontConst'
+import Typography from './Variable/variable'
 
 interface FontTypes {
   text?: string
