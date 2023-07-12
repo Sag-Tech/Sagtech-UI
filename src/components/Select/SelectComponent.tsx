@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import Select, { components, type DropdownIndicatorProps } from 'react-select'
 import '../../styles/globals.css'
 import { Icon } from '@components/IconComponent/Icon'
@@ -29,6 +29,12 @@ const DropdownIndicator = (props: DropdownIndicatorProps): JSX.Element => {
 
 const SelectComponent: React.FC<CustomSelectProps> = ({ state, errorText, labelText, options, disabled, isMenuOpen, onMenuToggle }) => {
   const customStyles = getCustomStyles(state as 'default' | 'active' | 'error')
+
+  const errorCheck = useMemo(() => {
+    const check = state === 'error' && !(isMenuOpen ?? false) && !(disabled ?? false)
+    return check
+  }, [state, isMenuOpen, disabled])
+
   return (
       <div>
         {(isMenuOpen ?? false) && <span className='absolute text-[10px] leading-4 top-24px left-43px font-medium text-grey_2 z-5'>{labelText}</span>}
@@ -43,7 +49,7 @@ const SelectComponent: React.FC<CustomSelectProps> = ({ state, errorText, labelT
         onMenuOpen={onMenuToggle}
         onMenuClose={onMenuToggle}
         />
-        {state === 'error' && !(isMenuOpen ?? false) && !(disabled ?? false) && <p className='px-6 pt-1 text-xs font-medium text-error'>{errorText}</p>}
+        {errorCheck && <p className='px-6 pt-1 text-xs font-medium text-error'>{errorText}</p>}
       </div>
   )
 }
