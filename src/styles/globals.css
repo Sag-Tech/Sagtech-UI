@@ -16,3 +16,9 @@ body {
 path {
     stroke: currentColor;
 }
+.customersBorderGradient {
+  background-image:  linear-gradient(0deg, rgba(7, 7, 21, 0.9), rgba(7, 7, 21, 0.9)), linear-gradient(180deg, #0C0C1E 0%, #221546 100%);
+  border: double 1px transparent;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}

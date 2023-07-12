@@ -11,7 +11,7 @@ module.exports = {
       grey_2: '#83838A',
       grey_3: '#9C9CA1',
       grey_4: '#B5B5B9',
-      white_1: '#B5B5B9',
+      white_1: '#CDCDD0',
       white_2: '#E6E6E8',
       white_3: '#F3F3F3',
       white_4: '#F8F8F8',
@@ -75,12 +75,14 @@ module.exports = {
       '16px': '16px'
     },
     borderWidth: {
-      6: '6px'
+      6: '6px',
+      1: '1px'
     },
     boxShadow: {
       '3xl': '0px 0px 16px 0px rgba(109, 62, 241, 0.24)',
       '4xl': '0px -8px 24px 0px rgba(255, 255, 255, 0.04)',
-      '5xl': '0px 0px 4px 0px rgba(109, 62, 241, 0.64)'
+      '5xl': '0px 0px 4px 0px rgba(109, 62, 241, 0.64)',
+      '6xl': '0px 0px 16px rgba(109, 62, 241, 0.56)'
     },
     borderRadius: {
       circle: '50px',
