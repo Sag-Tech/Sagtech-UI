@@ -1,15 +1,15 @@
 import { type StoryFn, type Meta } from '@storybook/react'
-import Font from './Font'
+import Typography from './Typography'
 
 export default {
-  title: 'Font',
-  component: Font
+  title: 'Typography',
+  component: Typography
 } satisfies Meta
 
-const Template: StoryFn = (arg) => <Font {...arg} />
+const Template: StoryFn = (arg) => <Typography {...arg} />
 
 export const Default = Template.bind({})
 Default.args = {
   text: 'Example',
-  type: 'H1'
+  tag: 'h1'
 }

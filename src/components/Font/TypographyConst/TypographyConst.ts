@@ -1,4 +1,4 @@
-const fontConst = {
+const typographyConst = {
   h1: 'font-["Orbitron"] text-40 sm:text-48 2xl:text-64 font-bold leading-56 sm:leading-64 2xl:leading-80 uppercase',
   h2: 'font-["Orbitron"] text-32 sm:text-40 2xl:text-48 font-bold leading-48 sm:leading-56 2xl:leading-64 uppercase',
   h3: 'font-["Manrope"] text-28 2xl:text-32 font-bold leading-40 2xl:leading-48',
@@ -10,4 +10,4 @@ const fontConst = {
   buttons: 'font-["Manrope"] text-16 font-bold leading-24'
 }
 
-export default fontConst
+export default typographyConst
