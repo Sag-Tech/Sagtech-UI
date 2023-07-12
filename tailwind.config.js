@@ -30,6 +30,12 @@ module.exports = {
     },
 
     fontSize: {
+      64: '64px',
+      48: '48px',
+      40: '40px',
+      32: '32px',
+      28: '28px',
+      18: '18px',
       16: '16px',
       14: '14px',
       12: '12px',
@@ -37,10 +43,16 @@ module.exports = {
     },
 
     lineHeight: {
+      80: '80px',
+      64: '64px',
+      56: '56px',
+      48: '48px',
+      40: '40px',
+      32: '32px',
+      28: '28px',
       24: '24px',
-      16: '16px',
       18: '18px',
-      28: '28px'
+      16: '16px'
     },
 
     spacing: {
@@ -83,6 +95,12 @@ module.exports = {
     },
     zIndex: {
       5: '5'
+    },
+    screens: {
+      sm: '768px',
+      xl: '1024px',
+      '2xl': '1440px',
+      '3xl': '1920px'
     }
   },
   plugins: []
