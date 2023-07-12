@@ -31,13 +31,12 @@ const SelectComponent: React.FC<CustomSelectProps> = ({ state, errorText, labelT
   const customStyles = getCustomStyles(state as 'default' | 'active' | 'error')
 
   const errorCheck = useMemo(() => {
-    const check = state === 'error' && !(isMenuOpen ?? false) && !(disabled ?? false)
+    const check = state === 'error' && !isMenuOpen && !disabled
     return check
   }, [state, isMenuOpen, disabled])
-
   return (
       <div>
-        {(isMenuOpen ?? false) && <span className='absolute text-[10px] leading-4 top-24px left-43px font-medium text-grey_2 z-5'>{labelText}</span>}
+        {isMenuOpen && <span className='absolute text-[10px] leading-4 top-24px left-43px font-medium text-grey_2 z-5'>{labelText}</span>}
         <Select
         styles={customStyles}
         options={options}

@@ -8,11 +8,7 @@ import { Icon } from '@components/IconComponent/Icon'
 import paginationConsts from './PaginationConst/PaginationConst'
 import classNames from 'classnames'
 
-interface PaginationType
-  extends DetailedHTMLProps<
-  ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
-  > {
+interface PaginationType extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   children?: React.ReactNode
   state?: 'default' | 'active' | 'disabled'
   arrowPosition?: 'left' | 'right'

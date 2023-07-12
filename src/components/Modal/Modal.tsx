@@ -7,7 +7,7 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ children, isOpen, toggle }) => {
-  if (!(isOpen ?? false)) {
+  if (!isOpen) {
     return null
   }
 
