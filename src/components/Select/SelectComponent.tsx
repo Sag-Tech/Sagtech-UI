@@ -33,6 +33,7 @@ const SelectComponent: React.FC<CustomSelectProps> = ({ state, errorText, labelT
   const errorCheck = useMemo(() => {
     return state === 'error' && !isMenuOpen && !disabled
   }, [state, isMenuOpen, disabled])
+
   return (
       <div>
         {isMenuOpen && <span className='absolute text-[10px] leading-4 top-24px left-43px font-medium text-grey_2 z-5'>{labelText}</span>}
