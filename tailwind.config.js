@@ -100,7 +100,6 @@ module.exports = {
       5: '5'
     },
     screens: {
-      sm2: '500px',
       sm: '768px',
       xl: '1024px',
       '2xl': '1440px',
