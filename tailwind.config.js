@@ -65,7 +65,7 @@ module.exports = {
       5: '5'
     },
     screens: {
-      sm: { max: '500px' }
+      sm2: { max: '500px' }
     }
   },
   plugins: []
