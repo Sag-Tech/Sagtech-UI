@@ -23,7 +23,7 @@ const TextArea: React.FC<TextAreaProps> = ({ state, value, classes, disabled, er
   return (
     <div>
         <textarea className={`${textareaStyles} ${classes !== undefined ? classes : ''}`} disabled={disabled} placeholder={value} {...rest}/>
-        {state === 'error' && <p className='px-6 pt-1 text-error text-12 font-medium leading-16'>{errorMessage}</p>}
+        {state === 'error' && <p className='px-24px pt-4px text-error text-12 font-medium leading-16'>{errorMessage}</p>}
     </div>
   )
 }

@@ -29,6 +29,41 @@ module.exports = {
       shape_stroke_2_part_two: '#2F1E5E',
       backdrop: 'rgba(0, 0, 0, 0.56)'
     },
+    fontSize: {
+      64: '64px',
+      48: '48px',
+      40: '40px',
+      32: '32px',
+      28: '28px',
+      18: '18px',
+      16: '16px',
+      14: '14px',
+      12: '12px',
+      10: '10px'
+    },
+
+    lineHeight: {
+      80: '80px',
+      64: '64px',
+      56: '56px',
+      48: '48px',
+      40: '40px',
+      32: '32px',
+      28: '28px',
+      24: '24px',
+      18: '18px',
+      16: '16px'
+    },
+
+    spacing: {
+      '40px': '40px',
+      '16px': '16px',
+      '32px': '32px',
+      '4px': '4px',
+      '8px': '8px',
+      '24px': '24px',
+      '23px': '23px'
+    },
 
     dropShadow: {
       '3xl': '0px 0px 4px rgba(255, 255, 255, 0.64)'
@@ -61,11 +96,12 @@ module.exports = {
       '8px': '8px',
       '0px': '0px'
     },
-    zIndex: {
-      5: '5'
-    },
     screens: {
-      sm2: { max: '500px' }
+      sm2: { max: '500px' },
+      sm: '768px',
+      xl: '1024px',
+      '2xl': '1440px',
+      '3xl': '1920px'
     }
   },
   plugins: []
