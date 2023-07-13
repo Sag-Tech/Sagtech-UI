@@ -56,6 +56,8 @@ module.exports = {
     },
 
     spacing: {
+      '64px': '64px',
+      '48px': '48px',
       '40px': '40px',
       '32px': '32px',
       '16px': '16px',
@@ -87,6 +89,7 @@ module.exports = {
     },
     borderRadius: {
       circle: '50px',
+      '40px': '40px',
       '16px': '16px',
       '8px': '8px',
       '24px': '24px'

@@ -10,7 +10,7 @@ export interface TypographyTypes {
   color?: VariantTypoColors
 }
 
-const Typography: React.FC<TypographyTypes> = ({ text, tag = 'p', type = 'BodyL', color = 'black_1' }) => {
+const Typography: React.FC<TypographyTypes> = ({ text, tag = 'p', type = 'BodyL', color = 'text-white_1' }) => {
   const tagDefault = tag === 'p'
   const Component = useMemo(() => tag, [tag])
   const classes = useMemo(
@@ -26,7 +26,7 @@ const Typography: React.FC<TypographyTypes> = ({ text, tag = 'p', type = 'BodyL'
           [typographyConst.labels]: type === 'Labels' && tagDefault,
           [typographyConst.info]: type === 'Info' && tagDefault,
           [typographyConst.buttons]: type === 'Buttons' && tagDefault,
-          [`text-${color}`]: true
+          [color]: true
         }
       ),
     [
