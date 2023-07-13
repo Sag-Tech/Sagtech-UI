@@ -3,10 +3,12 @@ import AdvantagesCard from '../AdvantagesCard/AdvantagesCard'
 import TestimonialCard from '../TestimonialCard/TestimonialCard'
 import CardWrapper from './CardWrapper'
 
-export default {
+const meta: Meta<typeof CardWrapper> = {
   title: 'CardWrapper/CardWrapper',
   component: CardWrapper
-} satisfies Meta
+}
+
+export default meta
 
 const Template: StoryFn = (arg) => <CardWrapper {...arg} />
 

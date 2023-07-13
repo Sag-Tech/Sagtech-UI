@@ -1,10 +1,12 @@
 import { type StoryFn, type Meta } from '@storybook/react'
 import AdvantagesCard from './AdvantagesCard'
 
-export default {
+const meta: Meta<typeof AdvantagesCard> = {
   title: 'CardWrapper/AdvantagesCard',
   component: AdvantagesCard
-} satisfies Meta
+}
+
+export default meta
 
 const Template: StoryFn = (arg) => <AdvantagesCard {...arg} />
 
