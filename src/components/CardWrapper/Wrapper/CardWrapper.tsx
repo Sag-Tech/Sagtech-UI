@@ -38,7 +38,9 @@ const CardWrapper: React.FC<CardWrapperTypes> = ({ className, children, rounded 
       'w-full h-full justify-between',
       classes,
       className
-    )} >
+    )}
+      data-testid="card-wrapper"
+    >
           {children}
     </div>
   )

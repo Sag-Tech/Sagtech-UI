@@ -2,7 +2,7 @@ import Typography from '@components/Typo/Typography'
 import React from 'react'
 import { type VariantTypoIcon } from './types'
 
-interface AdvantagesCardTypes {
+export interface AdvantagesCardTypes {
   title?: string
   description?: string
   icon?: VariantTypoIcon
