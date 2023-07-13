@@ -34,8 +34,8 @@ const Button: React.FC<ButtonTypes> = ({ text, disabled, buttonSize, loadingType
   })
 
   const iconComponent = useMemo(() => {
-    if ((useIcon ?? false)) {
-      return <Icon icon={ !(loadingType ?? false) ? 'project' : 'loading'} size={buttonSize === 'small' ? 18 : undefined} />
+    if (useIcon) {
+      return <Icon icon={ !loadingType ? 'project' : 'loading'} size={buttonSize === 'small' ? 18 : undefined} />
     }
     return null
   }, [useIcon, loadingType, buttonSize])

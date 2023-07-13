@@ -28,7 +28,9 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:storybook/recommended"
   ],
-  "rules": {},
+  "rules": {
+    "@typescript-eslint/strict-boolean-expressions": "off"
+  },
   "settings": {
     "react": {
       "version": "detect"

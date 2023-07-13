@@ -26,9 +26,9 @@ module.exports = {
       shape_stroke_1_part_one: '#0C0C1E',
       shape_stroke_1_part_two: '#221546',
       shape_stroke_2_part_one: '#1F1F38',
-      shape_stroke_2_part_two: '#2F1E5E'
+      shape_stroke_2_part_two: '#2F1E5E',
+      backdrop: 'rgba(0, 0, 0, 0.56)'
     },
-
     fontSize: {
       64: '64px',
       48: '48px',
@@ -58,6 +58,7 @@ module.exports = {
     spacing: {
       '40px': '40px',
       '16px': '16px',
+      '32px': '32px',
       '4px': '4px',
       '8px': '8px',
       '24px': '24px',
@@ -86,12 +87,14 @@ module.exports = {
       circle: '50px',
       '16px': '16px',
       '8px': '8px',
-      '24px': '24px'
+      '24px': '24px',
+      '40px': '40px'
     },
     inset: {
       '24px': '24px',
       '43px': '43px',
-      '8px': '8px'
+      '8px': '8px',
+      '0px': '0px'
     },
     zIndex: {
       5: '5'
