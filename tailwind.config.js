@@ -96,6 +96,9 @@ module.exports = {
       '8px': '8px',
       '0px': '0px'
     },
+    zIndex: {
+      5: '5'
+    },
     screens: {
       sm2: { max: '500px' },
       sm: '768px',
