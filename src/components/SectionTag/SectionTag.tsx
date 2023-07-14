@@ -3,12 +3,12 @@ import React, { useMemo } from 'react'
 import sectionTagConst from './SectionTagConst/SectionTagConst'
 import { type VariantTypoSize } from './types'
 
-interface CardWrapperTypes {
+interface SectionTagTypes {
   className?: string
   size?: VariantTypoSize
   children?: React.ReactNode
 }
-const SectionTag: React.FC<CardWrapperTypes> = ({ className, size = 'small', children }) => {
+const SectionTag: React.FC<SectionTagTypes> = ({ className, size = 'small', children }) => {
   const classes = useMemo(
     () =>
       classnames(
