@@ -5,7 +5,11 @@ export type VariantTypoTagsStyles =
   | 'Info'
   | 'Buttons'
 
-export type VariantTypoColors =
+export type VariantTypoIconName =
+  | 'users'
+  | 'calendar'
+
+export type VariantTypoColorsText =
   | 'text-black_1'
   | 'text-black_2'
   | 'text-black_3'
@@ -26,3 +30,25 @@ export type VariantTypoColors =
   | 'text-error'
   | 'text-warning'
   | 'text-success'
+
+export type VariantTypoColorsCircle =
+  | 'bg-black_1'
+  | 'bg-black_2'
+  | 'bg-black_3'
+  | 'bg-black_4'
+  | 'bg-grey_1'
+  | 'bg-grey_2'
+  | 'bg-grey_3'
+  | 'bg-grey_4'
+  | 'bg-white_1'
+  | 'bg-white_2'
+  | 'bg-white_3'
+  | 'bg-white_4'
+  | 'bg-white'
+  | 'bg-pr_purple'
+  | 'bg-sec_purple'
+  | 'bg-pr_blue'
+  | 'bg-sec_blue'
+  | 'bg-error'
+  | 'bg-warning'
+  | 'bg-success'

@@ -27,7 +27,7 @@ const SectionTag: React.FC<SectionTagTypes> = ({ className, size = 'small', chil
       className,
       classes
     )}
-      data-testid="section-tag"
+      data-tid="section-tag"
     >
           {children}
     </div>
