@@ -2,7 +2,7 @@ import { render } from '@testing-library/react'
 import AdvantagesCard, { type AdvantagesCardTypes } from '../AdvantagesCard/AdvantagesCard'
 import CardWrapper from './CardWrapper'
 
-describe('Font component', () => {
+describe('Card Wrapper component', () => {
   test('Get styles', () => {
     const { getByTestId } = render(<CardWrapper stoke ='1' rounded = '24' className='testClass'/>)
     const elementId = getByTestId('card-wrapper')
