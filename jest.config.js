@@ -6,12 +6,11 @@ module.exports = {
   moduleNameMapper: {
     "\\.(css|less|scss|sss|styl)$": "identity-obj-proxy",
     "^@components/(.*)$": "<rootDir>/src/components/$1",
-    "\\.(svg)$": "jest-transform-stub",
+    "\\.(svg)$": "<rootDir>/node_modules/jest-transform-stub",
   },
   setupFilesAfterEnv: ["./jest.setup.js", "jest-localstorage-mock"],
   transform: {
     "^.+\\.tsx?$": "ts-jest",
-    // "\\.(svg)$": "<rootDir>/jest-svg-transformer.js",
   },
   testMatch: ["**/__tests__/**/*.+(ts|tsx)", "**/?(*.)+(spec|test).+(ts|tsx)"],
   collectCoverageFrom: ["src/**/*.(ts|tsx)", "!src/**/*.d.ts"],
