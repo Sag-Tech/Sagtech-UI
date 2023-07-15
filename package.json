@@ -7,13 +7,13 @@
     "build": "babel src --out-dir lib",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "test:coverage-report": "jest --coverage --coverageReporters=text-lcov > coverage.lcov",
+    "test:coverage-report": "./coverage-report.sh",
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "postinstall": "chmod +x coverage-check.sh && husky install"
+    "postinstall": "chmod +x coverage-check.sh && chmod +x coverage-report.sh && husky install"
   },
   "browserslist": {
     "production": [
