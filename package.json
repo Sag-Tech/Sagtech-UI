@@ -6,6 +6,8 @@
     "start": "react-scripts start",
     "build": "babel src --out-dir lib",
     "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:coverage-report": "jest --coverage --coverageReporters=text-lcov > coverage.lcov",
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "prepare": "husky install",
@@ -92,7 +94,8 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "eslint --quiet --fix"
+      "eslint --quiet --fix",
+      "./coverage-check.sh"
     ]
   }
 }
