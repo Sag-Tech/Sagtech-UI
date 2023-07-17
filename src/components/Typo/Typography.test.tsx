@@ -38,18 +38,18 @@ describe('Font component', () => {
     expect(paragraphElement).toBeInTheDocument()
   })
 
-  test('Get Body L font', () => {
-    const { getByText } = render(<Font text = 'Text Body L' type = 'Body L' />)
-    const paragraphElement = getByText('Text Body L')
+  test('Get BodyL font', () => {
+    const { getByText } = render(<Font text = 'Text BodyL' type = 'BodyL' />)
+    const paragraphElement = getByText('Text BodyL')
 
     expect(paragraphElement.tagName).toBe('P')
     expect(paragraphElement).toHaveClass('font-["Manrope"] text-14 2xl:text-16 font-medium leading-28 2xl:leading-32')
     expect(paragraphElement).toBeInTheDocument()
   })
 
-  test('Get Body S font', () => {
-    const { getByText } = render(<Font text = 'Text Body S' type = 'Body S' />)
-    const paragraphElement = getByText('Text Body S')
+  test('Get BodyS font', () => {
+    const { getByText } = render(<Font text = 'Text BodyS' type = 'BodyS' />)
+    const paragraphElement = getByText('Text BodyS')
 
     expect(paragraphElement.tagName).toBe('P')
     expect(paragraphElement).toHaveClass('font-["Manrope"] text-14 font-medium leading-24 2xl:leading-28')
