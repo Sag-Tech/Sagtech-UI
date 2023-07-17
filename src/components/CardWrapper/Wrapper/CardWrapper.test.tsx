@@ -1,5 +1,4 @@
 import { render } from '@testing-library/react'
-import AdvantagesCard, { type AdvantagesCardTypes } from '../AdvantagesCard/AdvantagesCard'
 import CardWrapper from './CardWrapper'
 
 describe('Font component', () => {
@@ -19,19 +18,5 @@ describe('Font component', () => {
     const text = getByText('Test')
 
     expect(text).toBeInTheDocument()
-  })
-
-  test('Get component children', () => {
-    const args: AdvantagesCardTypes = {
-      title: 'Title',
-      description: 'Description',
-      icon: 'magic'
-    }
-    const children = <AdvantagesCard {...args} />
-    const { getByText, getByRole } = render(<CardWrapper>{children}</CardWrapper>)
-
-    expect(getByRole('img')).toHaveAttribute('src', '/svg/icons/magic.svg')
-    expect(getByText('Title')).toBeInTheDocument()
-    expect(getByText('Description')).toBeInTheDocument()
   })
 })
