@@ -1,7 +1,7 @@
 import React from 'react'
 import type { SVGProps } from 'react'
-import { content } from '../../assets/icons/icons'
-import type { IAvailableIcons } from '../../assets/icons/icons'
+import { content } from '../../assets/icons'
+import type { IAvailableIcons } from '../../assets/icons'
 
 export interface IIconProps {
   svgProps?: SVGProps<SVGSVGElement>
