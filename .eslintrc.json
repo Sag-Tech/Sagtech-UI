@@ -6,16 +6,16 @@
   "globals": {
     "React": "readonly"
   },
-  "ignorePatterns": ["jest.config.js"],
-  "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "react",
-    "@typescript-eslint"
+  "ignorePatterns": [
+    "jest.config.js",
+    "rollup.config.js",
+    "postcss.config.js",
+    "common-components"
   ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "@typescript-eslint"],
   "parserOptions": {
-    "project": [
-      "./tsconfig.json"
-    ],
+    "project": ["./tsconfig.json"],
     "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
