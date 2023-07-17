@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import Select, { components, type DropdownIndicatorProps } from 'react-select'
 import '../../styles/globals.css'
 import { Icon } from '@components/IconComponent/Icon'
@@ -29,9 +29,14 @@ const DropdownIndicator = (props: DropdownIndicatorProps): JSX.Element => {
 
 const SelectComponent: React.FC<CustomSelectProps> = ({ state, errorText, labelText, options, disabled, isMenuOpen, onMenuToggle }) => {
   const customStyles = getCustomStyles(state as 'default' | 'active' | 'error')
+
+  const errorCheck = useMemo(() => {
+    return state === 'error' && !isMenuOpen && !disabled
+  }, [state, isMenuOpen, disabled])
+
   return (
       <div>
-        {(isMenuOpen ?? false) && <span className='absolute text-10 leading-16 top-24px left-43px font-medium text-grey_2 z-5'>{labelText}</span>}
+        {isMenuOpen && <span className='absolute text-[10px] leading-4 top-24px left-43px font-medium text-grey_2 z-5'>{labelText}</span>}
         <Select
         styles={customStyles}
         options={options}
@@ -43,7 +48,7 @@ const SelectComponent: React.FC<CustomSelectProps> = ({ state, errorText, labelT
         onMenuOpen={onMenuToggle}
         onMenuClose={onMenuToggle}
         />
-       {state === 'error' && !(isMenuOpen ?? false) && !(disabled ?? false) && <p className='px-24px pt-4px text-12 leading-16 font-medium text-error'>{errorText}</p>}
+        {errorCheck && <p className='px-24px pt-4px text-12 leading-16 font-medium text-error'>{errorText}</p>}
       </div>
   )
 }

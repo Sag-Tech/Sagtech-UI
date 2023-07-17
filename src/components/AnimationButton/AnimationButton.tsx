@@ -13,7 +13,7 @@ const AnimationButton: React.FC<AnimateType> = ({ text }) => {
       className='buttonAnim  bg-pr_purple  px-8px py-8px items-center rounded-circle buttonAnims overflow-hidden'
     >
       <span
-        className='text-white  whitespace-nowrap animation font-["Manrope"] font-bold text-16 pr-16px leading-24 '
+        className='text-white  whitespace-nowrap animation font-["Manrope"] font-bold leading-24 pr-16px'
       >
         {text}
       </span>

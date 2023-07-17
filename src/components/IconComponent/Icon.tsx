@@ -2,13 +2,14 @@ import React from 'react'
 import type { SVGProps } from 'react'
 import { content } from '../../assets/icons/icons'
 import type { IAvailableIcons } from '../../assets/icons/icons'
-import type { CustomIconComponentProps } from '@ant-design/icons/lib/components/Icon'
 
-export interface IIconProps extends Partial<CustomIconComponentProps> {
+export interface IIconProps {
   svgProps?: SVGProps<SVGSVGElement>
   icon: IAvailableIcons
   size?: number
   color?: string
+  viewBox?: string
+  className?: string
 }
 
 export const Icon: React.FC<IIconProps> = ({
