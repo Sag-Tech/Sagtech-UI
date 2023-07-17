@@ -6,14 +6,14 @@ import classNames from 'classnames'
 
 interface ButtonTypes extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   loadingType?: boolean
-  text?: React.ReactNode
+  text?: string
   buttonSize?: 'small' | 'large' | 'tabSize'
   variant?: 'primary' | 'secondary' | 'tabButton'
   useIcon?: boolean
   stateOfButton?: 'default' | 'active'
 }
 
-const Button: React.FC<ButtonTypes> = ({ text, disabled, buttonSize, loadingType, variant, useIcon, stateOfButton, ...rest }) => {
+const Button: React.FC<ButtonTypes> = ({ text = 'button', disabled, buttonSize, loadingType, variant, useIcon, stateOfButton, ...rest }) => {
   const buttonClasses = classNames({
     [buttonConst.tabButtonActive]: variant === 'tabButton' && stateOfButton === 'active' && !(disabled ?? false),
     [buttonConst.tabButtonDefault]: variant === 'tabButton' && stateOfButton === 'default' && !(disabled ?? false),

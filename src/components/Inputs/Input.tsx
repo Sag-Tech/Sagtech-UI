@@ -4,14 +4,14 @@ import inputConsts from './InputsConsts/inputConsts'
 import classNames from 'classnames'
 
 interface InputTypes extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
-  value?: string
   state?: 'default' | 'active' | 'error'
   disabled?: boolean
   children?: React.ReactNode
   errorMessage?: string
+  label?: string
 }
 
-const Input: React.FC<InputTypes> = ({ state, value, errorMessage, disabled, ...rest }) => {
+const Input: React.FC<InputTypes> = ({ state, value, label, errorMessage, disabled, ...rest }) => {
   const inputStyles = classNames({
     [inputConsts.basicStyles]: true,
     [inputConsts.disabledInput]: true,
@@ -24,8 +24,8 @@ const Input: React.FC<InputTypes> = ({ state, value, errorMessage, disabled, ...
   return (
       <>
         <div className='flex flex-col relative'>
-        {state === 'active' && <span className='text-10 absolute top-8px left-24px leading-16 font-medium text-grey_2 '>Label</span>}
-        <input className={inputStyles} disabled={disabled} placeholder={value} {...rest} />
+        {state === 'active' && <span className='text-10 absolute top-8px left-24px leading-16 font-medium text-grey_2 '>{label}</span>}
+        <input className={inputStyles} disabled={disabled} {...rest} />
         </div>
         {state === 'error' && <p className='px-24px pt-4px text-error font-medium text-12 leading-16'>{errorMessage}</p>}
       </>

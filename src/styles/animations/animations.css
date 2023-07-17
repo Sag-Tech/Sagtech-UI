@@ -1,76 +1,74 @@
 .react-select__indicator-separator {
-    display: none !important;
+  display: none !important;
 }
 
 .react-select__indicator {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
 .react-select__value-container {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
 .modalAnim {
-  animation: slide-down 300ms ease-out forwards;
+animation: slide-down 300ms ease-out forwards;
 }
 
 @keyframes scaleIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-
-    50% {
-        opacity: 0.3;
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-  .animation {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-  
-  .buttonAnim:hover .animation {
-    opacity: 1;
-    transform: translateX(0);
-    transition: 0.8s;
-  }
-
-  .buttonAnim:hover .iconStyles {
-    transform: translateX(0);
-    transition: 0.8s;
-  } 
-
-  .iconStyles{
-     transform: translateX(-446%);
-     transition: 0.5s;
-  }
-
-
-  .buttonAnims {
-    width: 25.137%;
-    display: inline-flex;
-    transition: 0.5s;
-  }
-
-  .buttonAnims:hover {
-    width: 100%;
-    transition: 0.789s;
-    padding-left: 24px;
-  }
-
-  @keyframes slide-down {
-    from {
+  0% {
       opacity: 0;
-      transform: translateY(-3rem);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+      transform: scale(0.9);
   }
+
+  50% {
+      opacity: 0.3;
+  }
+
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+.animation {
+  width: 0px;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+.buttonAnim:hover .animation {
+  width: 100%;
+  transition: width 1.1s ease-out;
+}
+
+.buttonAnim:hover .iconStyles {
+  padding-left: 16px;
+} 
+
+.iconStyles{
+  padding-left: 0px;
+} 
+
+
+.buttonAnim {
+  width: 48px;
+  display: inline-flex;
+  transition: width 0.3s ease;
+  padding: 8px;
+}
+
+.buttonAnims:hover {
+  width: 100%;
+  transition: width 0.7s ease;
+  padding-left: 24px;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

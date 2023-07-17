@@ -13,7 +13,8 @@ export const NotificationDesctopSize = NotificationDescktop.bind({})
 NotificationDesctopSize.args = {
   title: 'Thank you!',
   text: 'You have been successfully subscribed on our newsletter! You can unsubscribe at any time.',
-  buttonText: 'Accept',
+  buttonTextSecond: 'Decline',
+  buttonTextFirst: 'Accept',
   state: 'success',
   size: 'desktop'
 }
@@ -25,7 +26,8 @@ export const NotificationMobileSize = NotificationMobile.bind({})
 NotificationMobileSize.args = {
   title: 'Thank you!',
   text: 'You have been successfully subscribed on our newsletter! You can unsubscribe at any time.',
-  buttonText: 'Accept',
+  buttonTextSecond: 'Decline',
+  buttonTextFirst: 'Accept',
   state: 'success',
   size: 'mobile'
 }

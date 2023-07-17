@@ -49,7 +49,7 @@
     "jest.setup.js",
     "tailwind.config.js",
     "postcss.config.js",
-    "craco.config.js",
+    "craco.config.js", "src/components/Attachment/Attachment.jsx", "src/components/Button/Button.jsx",
    ],
   "exclude": [
     "node_modules",

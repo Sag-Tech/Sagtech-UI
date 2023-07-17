@@ -18,7 +18,7 @@ const Modal: React.FC<ModalProps> = ({ children, isOpen, toggle }) => {
   }
 
   return (
-    <div className="fixed z-[20] flex w-full justify-center">
+    <div data-tid='Modal' className="fixed z-[20] flex w-full justify-center">
     <div
       onClick={toggle}
       onKeyDown={handleKeyDown}
@@ -27,7 +27,7 @@ const Modal: React.FC<ModalProps> = ({ children, isOpen, toggle }) => {
       tabIndex={0}
       aria-label='Close modal'
     />
-    <div className="border-[1px] border-solid border-black_3 modalAnim z-[30] mt-[120px] inline-flex sm:w-[454px]  shadow-4xl rounded-40px bg-black_1 sm:p-32px  mx-8px w-full p-24px">
+    <div className="border-[1px] border-solid border-black_3 modalAnim z-[30] mt-[120px] inline-flex sm2:w-[454px]  shadow-4xl rounded-40px bg-black_1 sm2:p-32px  mx-8px w-full p-24px">
       <div className="w-full">{children}</div>
     </div>
   </div>

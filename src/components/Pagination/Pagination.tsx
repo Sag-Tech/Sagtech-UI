@@ -9,13 +9,13 @@ import paginationConsts from './PaginationConst/PaginationConst'
 import classNames from 'classnames'
 
 interface PaginationType extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-  children?: React.ReactNode
+  text?: string
   state?: 'default' | 'active' | 'disabled'
   arrowPosition?: 'left' | 'right'
 }
 
 const Pagination: React.FC<PaginationType> = ({
-  children,
+  text,
   state,
   disabled,
   arrowPosition,
@@ -32,18 +32,17 @@ const Pagination: React.FC<PaginationType> = ({
   }
 
   const buttonStyles = classNames({
-    [paginationConsts.defaultStyles]:
-      state === 'default' && !(disabled ?? false),
+    [paginationConsts.defaultStyles]: state === 'default' && !disabled,
     [paginationConsts.animation]: hover,
-    [paginationConsts.activeStyles]: state === 'active' && !(disabled ?? false),
+    [paginationConsts.activeStyles]: state === 'active' && !disabled,
     [paginationConsts.disabledStyles]: disabled,
     [paginationConsts.basicStyles]: true
   })
 
   const iconColors = `
    ${hover ? '#F8F8F8' : ''} 
-   ${state === 'default' && !(disabled ?? false) ? '#B5B5B9' : ''}
-   ${state === 'active' && !(disabled ?? false) ? '#FFFFFF' : ''}
+   ${state === 'default' && !disabled ? '#B5B5B9' : ''}
+   ${state === 'active' && !disabled ? '#FFFFFF' : ''}
   `
   const mouseOver = state === 'default' ? mouseHandlerOver : null
   const mouseLeave = state === 'default' ? mouseHandlerLeave : null
@@ -56,7 +55,7 @@ const Pagination: React.FC<PaginationType> = ({
       disabled={disabled}
       {...rest}
     >
-      <span className="w-[24px]">{children}</span>
+      <span className="w-[24px]">{text}</span>
       <Icon
         icon="paginatioArrow"
         color={iconColors}

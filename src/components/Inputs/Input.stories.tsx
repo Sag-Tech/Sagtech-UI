@@ -6,34 +6,34 @@ export default {
   component: Input
 } satisfies Meta
 
-const DefaultInput: StoryFn = (arg) => <Input {...arg}/>
+const DefaultInput: StoryFn = (arg) => <Input placeholder='Enter your email' {...arg}/>
 
 export const InputDefault = DefaultInput.bind({})
 
 InputDefault.args = {
-  value: 'Enter your email',
+  label: 'label',
   disabled: false,
   errorMessage: 'Error text',
   state: 'default'
 }
 
-const ErrorInput: StoryFn = (arg) => <Input {...arg}/>
+const ErrorInput: StoryFn = (arg) => <Input placeholder='Enter your email' {...arg}/>
 
 export const InputsError = ErrorInput.bind({})
 
 InputsError.args = {
-  value: 'Enter your email',
+  label: 'label',
   disabled: false,
   errorMessage: 'Error text',
   state: 'error'
 }
 
-const ActiveInput: StoryFn = (arg) => <Input {...arg}/>
+const ActiveInput: StoryFn = (arg) => <Input placeholder='Enter your email' {...arg}/>
 
 export const InputActive = ActiveInput.bind({})
 
 InputActive.args = {
-  value: 'Enter your email',
+  label: 'label',
   disabled: false,
   errorMessage: 'Error text',
   state: 'active'

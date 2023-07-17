@@ -1,9 +1,20 @@
-import { render, screen } from '@testing-library/react'
-
+import { render } from '@testing-library/react'
 import Modal from './Modal'
+import userEvent from '@testing-library/user-event'
 
-test('check Notification', () => {
-  render(<Modal />)
-  const modalElement = screen.getByRole('div')
-  expect(modalElement).toBeInTheDocument()
+describe('Modal component', () => {
+  it('Modal Render', () => {
+    const { getByTestId } = render(<Modal isOpen={true} />)
+    const modalElement = getByTestId('Modal')
+    expect(modalElement).toBeInTheDocument()
+  })
+
+  it('onClick check', () => {
+    const onClick = jest.fn()
+    const { getByRole } = render(<Modal isOpen={true} toggle={onClick}/>)
+    const backdropElement = getByRole('button')
+    expect(backdropElement).toBeInTheDocument()
+    userEvent.click(backdropElement)
+    expect(onClick).toHaveBeenCalledTimes(1)
+  })
 })
