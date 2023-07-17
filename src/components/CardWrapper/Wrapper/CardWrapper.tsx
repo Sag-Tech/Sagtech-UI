@@ -39,7 +39,7 @@ const CardWrapper: React.FC<CardWrapperTypes> = ({ className, children, rounded 
       classes,
       className
     )}
-      data-testid="card-wrapper"
+      data-tid="card-wrapper"
     >
           {children}
     </div>
