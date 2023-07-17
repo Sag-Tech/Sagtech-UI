@@ -11,8 +11,8 @@ import postcssImport from "postcss-import";
 import { default as dts } from "rollup-plugin-dts";
 
 const commonPlugins = [
-  resolve(),
   commonjs(),
+  resolve(),
   json(),
   postcss({
     extensions: [".css"],
@@ -33,7 +33,11 @@ const commonPlugins = [
     ],
   }),
   terser(),
-  typescript(),
+  typescript({
+    compilerOptions: {
+      declaration: false,
+    },
+  }),
   svgr({
     dimensions: false,
     svgoConfig: {
@@ -71,8 +75,8 @@ export default [
     output: [
       {
         dir: "common-components",
-        file: "dist/index.d.ts",
-        format: "es",
+        // file: "dist/index.d.ts",
+        format: "esm",
       },
     ],
     plugins: [
