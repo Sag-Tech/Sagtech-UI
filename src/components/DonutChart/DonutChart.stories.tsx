@@ -12,4 +12,10 @@ const Template: StoryFn = (arg) => <DonutChart {...arg} />
 
 export const Default = Template.bind({})
 Default.args = {
+  value: [50, 50, 25, 50, 25]
+}
+
+export const Primary = Template.bind({})
+Primary.args = {
+  value: [5, 10, 25, 40, 5]
 }
