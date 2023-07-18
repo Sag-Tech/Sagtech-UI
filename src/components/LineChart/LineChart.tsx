@@ -3,24 +3,18 @@ import Chart from 'react-apexcharts'
 import { type ApexOptions } from 'apexcharts'
 
 interface LineChartTypes {
-  type?: string
+  min?: number
+  max?: number
+  tickAmountX?: number
+  series?: Array<{
+    name: string
+    data: Array<{
+      x: string
+      y: number
+    }>
+  }>
 }
-const LineChart: React.FC<LineChartTypes> = () => {
-  const series = [
-    {
-      name: 'employees',
-      data: [[1, 7], [1.8, 14], [2.2, 9], [2.6, 17], [2.8, 11], [3.5, 17], [4.2, 10], [5, 18]]
-    },
-    {
-      name: 'projects',
-      data: [[1, 9], [1.4, 14], [1.7, 11], [2.3, 17], [2.6, 14], [2.8, 16], [3.3, 13], [4, 18], [4.7, 13], [4.8, 14], [5, 9]]
-    },
-    {
-      name: 'clients',
-      data: [[1, 11], [2.2, 14], [2.8, 20], [4, 9], [5, 20]]
-    }
-  ]
-
+const LineChart: React.FC<LineChartTypes> = ({ min = 0, max = 100, tickAmountX = 2, series }) => {
   const options: ApexOptions = {
     chart: {
       height: 219,
@@ -28,7 +22,10 @@ const LineChart: React.FC<LineChartTypes> = () => {
       toolbar: {
         show: false
       },
-      fontFamily: 'Manrope'
+      fontFamily: 'Manrope',
+      zoom: {
+        enabled: false
+      }
     },
     tooltip: {
       enabled: false
@@ -42,34 +39,51 @@ const LineChart: React.FC<LineChartTypes> = () => {
     },
     colors: ['#6D3EF1', '#9271EE', '#CBBCF8'],
     xaxis: {
-      type: 'category',
-      categories: ['Q3 2022', 'Q4 2022', 'Q1 2023', 'Q2 2023'],
-      tickAmount: 4,
+      type: 'datetime',
+      tickAmount: tickAmountX,
+      decimalsInFloat: 0,
       axisTicks: {
-        show: false
+        show: true,
+        color: '#000'
       },
       axisBorder: {
         show: false
       },
       labels: {
+        formatter: function (value) {
+          const date = new Date(value)
+          const month = date.getMonth()
+          const year = date.getFullYear()
+          let quarter
+          if (month >= 0 && month <= 2) {
+            quarter = 'Q1'
+          } else if (month >= 3 && month <= 5) {
+            quarter = 'Q2'
+          } else if (month >= 6 && month <= 8) {
+            quarter = 'Q3'
+          } else {
+            quarter = 'Q4'
+          }
+          return `${quarter} ${year}`
+        },
+        showDuplicates: false,
         show: true,
         hideOverlappingLabels: true,
         style: {
           colors: ['#51515B', '#51515B', '#51515B', '#51515B'],
           fontSize: '14px',
           fontFamily: 'Manrope',
-          fontWeight: 500,
-          cssClass: ''
+          fontWeight: 500
         },
         offsetY: 10,
-        offsetX: 35
+        offsetX: 0
       }
     },
     yaxis: {
       show: true,
       tickAmount: 3,
-      min: 5,
-      max: 20,
+      min,
+      max,
       labels: {
         show: true,
         offsetY: 3,
@@ -95,7 +109,7 @@ const LineChart: React.FC<LineChartTypes> = () => {
       padding: {
         top: 0,
         right: 0,
-        bottom: 0,
+        bottom: 10,
         left: 16
       }
     },
@@ -104,15 +118,13 @@ const LineChart: React.FC<LineChartTypes> = () => {
     }
   }
   return (
-    <div id="chart">
-      <Chart
-        options={options}
-        series={series}
-        type="line"
-        width={800}
-        height={243}
-      />
-    </div>
+    <Chart
+      options={options}
+      series={series}
+      type="line"
+      width='100%'
+      height={243}
+    />
   )
 }
 export default LineChart
