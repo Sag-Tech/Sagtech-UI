@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event'
 describe('Modal component', () => {
   it('Modal Render', () => {
     const { getByTestId } = render(<Modal isOpen={true} />)
-    const modalElement = getByTestId('Modal')
+    const modalElement = getByTestId('modal')
     expect(modalElement).toBeInTheDocument()
   })
 
