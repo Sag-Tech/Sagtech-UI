@@ -1,5 +1,5 @@
-import * as react from 'react';
-import react__default, { SVGProps, ReactNode } from 'react';
+import * as React from 'react';
+import React__default, { SVGProps, ReactNode } from 'react';
 
 type VariantTypoTags = 'h1' | 'h2' | 'h3' | 'h4' | 'p';
 type VariantTypoTagsStyles = 'BodyL' | 'BodyS' | 'Labels' | 'Info' | 'Buttons';
@@ -11,30 +11,31 @@ interface TypographyTypes {
     type?: VariantTypoTagsStyles;
     color?: VariantTypoColors;
 }
+declare const Typography: React__default.FC<TypographyTypes>;
 
 declare const content: {
-    loading: react.FunctionComponent<react.SVGProps<SVGSVGElement> & {
+    loading: React.FunctionComponent<React.SVGProps<SVGSVGElement> & {
         title?: string | undefined;
     }>;
-    project: react.FunctionComponent<react.SVGProps<SVGSVGElement> & {
+    project: React.FunctionComponent<React.SVGProps<SVGSVGElement> & {
         title?: string | undefined;
     }>;
-    arrow: react.FunctionComponent<react.SVGProps<SVGSVGElement> & {
+    arrow: React.FunctionComponent<React.SVGProps<SVGSVGElement> & {
         title?: string | undefined;
     }>;
-    attach: react.FunctionComponent<react.SVGProps<SVGSVGElement> & {
+    attach: React.FunctionComponent<React.SVGProps<SVGSVGElement> & {
         title?: string | undefined;
     }>;
-    paginatioArrow: react.FunctionComponent<react.SVGProps<SVGSVGElement> & {
+    paginatioArrow: React.FunctionComponent<React.SVGProps<SVGSVGElement> & {
         title?: string | undefined;
     }>;
-    success: react.FunctionComponent<react.SVGProps<SVGSVGElement> & {
+    success: React.FunctionComponent<React.SVGProps<SVGSVGElement> & {
         title?: string | undefined;
     }>;
-    error: react.FunctionComponent<react.SVGProps<SVGSVGElement> & {
+    error: React.FunctionComponent<React.SVGProps<SVGSVGElement> & {
         title?: string | undefined;
     }>;
-    chevrondown: react.FunctionComponent<react.SVGProps<SVGSVGElement> & {
+    chevrondown: React.FunctionComponent<React.SVGProps<SVGSVGElement> & {
         title?: string | undefined;
     }>;
 };
@@ -48,7 +49,7 @@ interface IIconProps {
     viewBox?: string;
     className?: string;
 }
-declare const Icon: react__default.FC<IIconProps>;
+declare const Icon: React__default.FC<IIconProps>;
 
 interface Option {
     value: string;
@@ -99,7 +100,7 @@ interface ContextProps {
 interface ProviderProps {
     children: ReactNode;
 }
-declare const ModalContext: react.Context<ContextProps>;
+declare const ModalContext: React.Context<ContextProps>;
 declare const ModalContextProvider: ({ children }: ProviderProps) => JSX.Element;
 
-export { CustomSelectProps, IAvailableIcons, IIconProps, Icon, ModalContext, ModalContextProvider, Option, TColorsValues, TypographyTypes, content };
+export { CustomSelectProps, IAvailableIcons, IIconProps, Icon, ModalContext, ModalContextProvider, Option, TColorsValues, Typography, TypographyTypes, content };

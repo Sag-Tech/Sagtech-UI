@@ -27,14 +27,6 @@
       "last 1 safari version"
     ]
   },
-  "dependencies": {
-    "@craco/craco": "^7.1.0",
-    "classnames": "^2.3.2",
-    "react-refresh": "^0.14.0",
-    "react-scripts": "^5.0.1",
-    "react-select": "^5.7.3",
-    "web-vitals": "^2.1.4"
-  },
   "devDependencies": {
     "@babel/cli": "^7.21.5",
     "@babel/plugin-transform-runtime": "^7.21.4",
@@ -113,5 +105,12 @@
       "eslint --quiet --fix",
       "./coverage-check.sh"
     ]
+  },
+  "dependencies": {
+    "react-select": "^5.7.3"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
   }
 }
