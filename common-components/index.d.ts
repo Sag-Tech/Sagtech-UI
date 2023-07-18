@@ -11,6 +11,7 @@ interface TypographyTypes {
     type?: VariantTypoTagsStyles;
     color?: VariantTypoColors;
 }
+declare const Typography: React__default.FC<TypographyTypes>;
 
 declare const content: {
     loading: React.FunctionComponent<React.SVGProps<SVGSVGElement> & {
@@ -102,4 +103,4 @@ interface ProviderProps {
 declare const ModalContext: React.Context<ContextProps>;
 declare const ModalContextProvider: ({ children }: ProviderProps) => JSX.Element;
 
-export { CustomSelectProps, IAvailableIcons, IIconProps, Icon, ModalContext, ModalContextProvider, Option, TColorsValues, TypographyTypes, content };
+export { CustomSelectProps, IAvailableIcons, IIconProps, Icon, ModalContext, ModalContextProvider, Option, TColorsValues, Typography, TypographyTypes, content };
