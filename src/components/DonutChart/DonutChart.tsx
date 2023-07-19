@@ -1,20 +1,26 @@
 import React from 'react'
 import Chart from 'react-apexcharts'
-import { options } from './DonutChartConst/DonutChartConst'
+import { getChartOptions } from './DonutChartConst/DonutChartConst'
+import { type VariantType } from './types'
 
 interface DonutChartTypes {
   value?: number[]
+  width?: number
+  type?: VariantType
+  colors?: string[]
+  size?: number
 }
-const DonutChart: React.FC<DonutChartTypes> = ({ value = [50, 50, 25, 50, 25] }) => {
+const DonutChart: React.FC<DonutChartTypes> = ({ value = [100], width = '100%', type = 'donut', colors = [], size = 8 }) => {
   const series = value
+  const options = getChartOptions(colors, size)
 
   return (
     <div data-tid="DonutChart">
       <Chart
         options={options}
         series={series}
-        type="donut"
-        width='100%'
+        type={type}
+        width={width}
       />
     </div>
   )

@@ -15,6 +15,7 @@ Default.args = {
   min: 5,
   max: 20,
   tickAmountX: 4,
+  height: 243,
   series: [
     {
       name: 'employees',
