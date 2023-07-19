@@ -72,3 +72,16 @@ animation: slide-down 300ms ease-out forwards;
     transform: translateY(0);
   }
 }
+
+.animation-images {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.animation-images.fade-out {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.animation-images.fade-in {
+  opacity: 1;
+}

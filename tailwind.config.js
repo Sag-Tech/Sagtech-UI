@@ -27,7 +27,8 @@ module.exports = {
       shape_stroke_1_part_two: '#221546',
       shape_stroke_2_part_one: '#1F1F38',
       shape_stroke_2_part_two: '#2F1E5E',
-      backdrop: 'rgba(0, 0, 0, 0.56)'
+      backdrop: 'rgba(0, 0, 0, 0.56)',
+      backdrop_2: 'rgba(255, 255, 255, 0.04)'
     },
     fontSize: {
       64: '64px',
@@ -81,7 +82,8 @@ module.exports = {
     },
     borderWidth: {
       6: '6px',
-      1: '1px'
+      1: '1px',
+      5: '5px'
     },
     boxShadow: {
       '3xl': '0px 0px 16px 0px rgba(109, 62, 241, 0.24)',
@@ -94,7 +96,8 @@ module.exports = {
       '40px': '40px',
       '16px': '16px',
       '8px': '8px',
-      '24px': '24px'
+      '24px': '24px',
+      '50%': '50%'
     },
     inset: {
       '24px': '24px',
