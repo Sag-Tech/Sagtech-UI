@@ -29,12 +29,19 @@ export default {
   component: Timeline
 } satisfies Meta
 
-const TimeLineDefault: StoryFn = (arg) => <Timeline imgName={images} {...arg} />
+const TimeLineDefault: StoryFn = (arg) => {
+  return (
+    <Timeline imgName={images} {...arg}>
+        {images.map((imageName, index) => (
+        <img key={index} src={`img/animationImg/${imageName}.png`} alt={imageName} />
+        ))}
+    </Timeline>
+  )
+}
 
 export const TimeLineCheck = TimeLineDefault.bind({})
 
 TimeLineCheck.args = {
   data: info,
-  imgName: images,
   classes: 'fix-images'
 }

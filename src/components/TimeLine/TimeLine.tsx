@@ -13,9 +13,10 @@ interface TimeLineProps {
   data?: Text[]
   imgName: string[]
   classes?: string
+  children?: React.ReactNode
 }
 
-const Timeline: React.FC<TimeLineProps> = ({ data, imgName, classes }) => {
+const Timeline: React.FC<TimeLineProps> = ({ data, imgName, classes, children }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const information = useMemo(() => {
@@ -47,19 +48,22 @@ const Timeline: React.FC<TimeLineProps> = ({ data, imgName, classes }) => {
   }, [data])
 
   const images = useMemo(() => {
-    return imgName.map((img, index) => (
-      <div
-        className={`${defaultStyles.coverImg} ${index === imgName.length - 1 ? 'relative' : ''} ${'first:z-[10]'} ${classes !== undefined ? classes : ''}`}
-        key={index}
-      >
-        <img
-          src={`img/animationImg/${img}.png`}
-          alt={img}
-          className={`${defaultStyles.img} ${currentSlide === index ? 'fade-in' : 'fade-out'}`}
-        />
-      </div>
-    ))
-  }, [imgName, currentSlide])
+    if (!children) return null
+
+    return React.Children.map(children, (child, index) => {
+      return (
+        <div
+          className={`${defaultStyles.coverImg} 
+          ${index === imgName.length - 1 ? 'relative' : ''} 
+          ${index === 0 ? 'first:z-[10]' : ''} 
+          ${classes !== undefined ? classes : ''}`}
+          key={index}
+        >
+          {React.cloneElement(child as React.ReactElement, { className: `${defaultStyles.img} ${currentSlide === index ? 'fade-in' : 'fade-out'}` })}
+        </div>
+      )
+    })
+  }, [children, imgName, currentSlide])
 
   return (
     <>
