@@ -1,5 +1,6 @@
 const textareaConsts = {
-  basicStyles: 'bg-black_1 border-[1px] resize-none border-solid w-full leading-24 py-16px px-24px  font-["Manrope"] font-medium leading-6 outline-none rounded-16px',
+  basicStyles:
+    'bg-black_1 border-[1px] resize-none border-solid w-full leading-24 py-16px px-24px font-medium leading-6 outline-none rounded-16px',
   defaultBorder: 'border-pr_purple',
   defaultStyles: 'placeholder:text-grey_4 text-grey_4',
   disabledArea: 'disabled:border-grey_2 disabled:placeholder:text-grey_2',

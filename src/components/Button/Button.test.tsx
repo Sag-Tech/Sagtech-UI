@@ -14,14 +14,14 @@ describe('Button component', () => {
     const iconElement = queryByTestId('icon')
     expect(buttonElement).toBeInTheDocument()
     expect(iconElement).toBeInTheDocument()
-    expect(buttonElement).toHaveClass('leading-24 flex justify-center items-center gap-8px  font-bold rounded-[16px] font-["Manrope"]')
+    expect(buttonElement).toHaveClass('leading-24 flex justify-center items-center gap-8px  font-bold rounded-[16px]')
   })
 
   it('Button primary', () => {
     const { getByRole } = render(<Button variant='primary' buttonSize='large'/>)
     const buttonElement = getByRole('button')
     expect(buttonElement).toBeInTheDocument()
-    expect(buttonElement).toHaveClass('border-black_1 border-solid  bg-pr_purple   text-white  transition-all duration-800 py-16px px-40px leading-24 hover:border-[6px] hover:border-solid hover:border-black_1 hover:shadow-3xl hover:transition-all hover:duration-300')
+    expect(buttonElement).toHaveClass('bg-pr_purple border-[1px] border-solid border-pr_purple transition-all text-white hover:border-[6px] hover:border-solid hover:border-black_1 hover:shadow-3xl hover:transition-all leading-24 flex justify-center items-center gap-8px font-bold rounded-[16px] disabled:bg-[#545259] disabled:text-grey_2 py-16px px-40px leading-24')
   })
 
   it('Button secondary', () => {

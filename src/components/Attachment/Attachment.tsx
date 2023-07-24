@@ -1,4 +1,4 @@
-import React, { useState, type InputHTMLAttributes, type DetailedHTMLProps } from 'react'
+import React, { useState, type InputHTMLAttributes, type DetailedHTMLProps, useMemo } from 'react'
 import '../../styles/globals.css'
 import { Icon } from '../IconComponent/Icon'
 import attachmentConsts from './AttachmentConsts/attachmentConsts'
@@ -40,12 +40,13 @@ const Attachment: React.FC<AttachmentTypes> = ({ state, accept, children, ...res
     [attachmentConsts.defaultAttachmentVariants]: true
   })
 
-  const iconColors = `
+  const iconColors = useMemo(() => `
   ${hover && state === 'default' ? '#F8F8F8' : ''}
   ${state !== 'active' && state !== 'disabled' && !hover ? '#B5B5B9' : ''}
   ${state === 'active' ? '#F8F8F8' : ''}
   ${state === 'disabled' ? '#83838A' : ''}
-  `
+  `, [state, hover])
+
   return (
      <label onMouseOver={state === 'default' ? mouseHandlerOver : undefined} onMouseLeave={state === 'default' ? mouseHandlerLeave : undefined} className='inline-flex items-center gap-12px pointer cursor-pointer'>
         <Icon icon='attach' color={iconColors} />

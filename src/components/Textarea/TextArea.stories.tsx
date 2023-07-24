@@ -31,7 +31,7 @@ const ErrorTextArea: StoryFn = (arg) => <TextArea placeholder='Text here, please
 export const TextAreaError = ErrorTextArea.bind({})
 
 TextAreaError.args = {
-  state: 'error',
+  isError: true,
   classes: 'h-[168px]',
   disabled: false,
   errorMessage: 'Error message'

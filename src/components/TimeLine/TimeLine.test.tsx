@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import TimeLine from './TimeLine'
+import Timeline from './Timeline'
 
 interface SwiperProps {
   children: React.ReactNode
@@ -27,6 +27,8 @@ const info = [
   }
 ]
 
+const images = ['animation-one']
+
 jest.mock('swiper/react', () => ({
   Swiper: ({ children }: SwiperProps) => (
     <div data-tid='swiper'>{children}</div>
@@ -42,8 +44,12 @@ jest.mock('swiper/css', () => jest.fn())
 
 describe('TineLine component', () => {
   it('TineLine component render', () => {
-    const { getByTestId, getByText } = render(<TimeLine imgName={['animation-one']} data={info} />)
-    const imagesElement = getByTestId('images')
+    const { getByTestId, getByText } = render(<Timeline imgName={images} data={info} >
+       {images.map((imageName, index) => (
+        <img data-tid={`image-${imageName}`} key={index} src={`img/animationImg/${imageName}.png`} alt={imageName} />
+       ))}
+    </Timeline>)
+    const imagesElement = getByTestId('image-animation-one')
     const swiperElement = getByTestId('swiper')
     const slideElement = getByText('In-depth Niche Analysis')
     expect(imagesElement).toBeInTheDocument()

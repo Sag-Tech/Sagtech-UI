@@ -25,7 +25,7 @@ InputsError.args = {
   label: 'label',
   disabled: false,
   errorMessage: 'Error text',
-  state: 'error'
+  isError: true
 }
 
 const ActiveInput: StoryFn = (arg) => <Input placeholder='Enter your email' {...arg}/>

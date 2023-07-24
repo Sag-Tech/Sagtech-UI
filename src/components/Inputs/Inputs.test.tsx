@@ -31,7 +31,7 @@ describe('Input component', () => {
   })
 
   it('Input with error state', () => {
-    const { getByRole, getByText } = render(<Input state='error' errorMessage='Error'/>)
+    const { getByRole, getByText } = render(<Input isError errorMessage='Error'/>)
     const inputElement = getByRole('textbox')
     const errorElement = getByText('Error')
     expect(inputElement).toBeInTheDocument()

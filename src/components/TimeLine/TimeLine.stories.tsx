@@ -1,5 +1,5 @@
 import { type Meta, type StoryFn } from '@storybook/react'
-import Timeline from './TimeLine'
+import Timeline from './Timeline'
 
 const info = [
   {

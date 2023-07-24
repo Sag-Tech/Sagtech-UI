@@ -10,7 +10,7 @@ describe('TextArea component', () => {
     const { getByRole } = render(<TextArea />)
     const textAreaElement = getByRole('textbox')
     expect(textAreaElement).toBeInTheDocument()
-    expect(textAreaElement).toHaveClass('bg-black_1 border-[1px] resize-none border-solid w-full leading-24 py-16px px-24px  font-["Manrope"] font-medium leading-6 outline-none rounded-16px')
+    expect(textAreaElement).toHaveClass('bg-black_1 border-[1px] resize-none border-solid w-full leading-24 py-16px px-24px  font-medium leading-6 outline-none rounded-16px')
   })
 
   it('TextArea with active state', () => {
@@ -28,7 +28,7 @@ describe('TextArea component', () => {
   })
 
   it('TextArea with error state', () => {
-    const { getByRole, getByText } = render(<TextArea state='error' errorMessage='Error'/>)
+    const { getByRole, getByText } = render(<TextArea isError errorMessage='Error'/>)
     const textAreaElement = getByRole('textbox')
     const errorElement = getByText('Error')
     expect(textAreaElement).toBeInTheDocument()
