@@ -92,3 +92,6 @@ path {
           mask-composite: exclude; 
 }
 
+.fix-images:first-child img {
+  object-position: left;
+}

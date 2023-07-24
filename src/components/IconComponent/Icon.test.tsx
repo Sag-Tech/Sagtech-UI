@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react'
+
 import { type IIconProps } from './Icon'
 import { Icon } from './Icon'
 

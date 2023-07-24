@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react'
-import Pagination from './Pagination'
 import userEvent from '@testing-library/user-event'
+
+import Pagination from './Pagination'
 import { type IIconProps } from '@components/IconComponent/Icon'
 
 jest.mock('@components/IconComponent/Icon', () => ({

@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react'
+
 import { Icon, type IIconProps } from '@components/IconComponent/Icon'
 import Notification from './Notification'
 
