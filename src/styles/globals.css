@@ -13,10 +13,6 @@ body {
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     background: #070715;
 }
-
-path {
-    stroke: currentColor;
-}
 .filterIcon{
   filter: drop-shadow(0px 0px 16px rgba(109, 62, 241, 0.56)) drop-shadow(0px 0px 16px rgba(109, 62, 241, 0.56)) drop-shadow(0px 0px 16px rgba(109, 62, 241, 0.56));
 }
