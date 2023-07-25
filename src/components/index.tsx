@@ -6,7 +6,7 @@ export * from './Typo/Typography'
 // TODO: rename
 export * from './IconComponent/Icon'
 // TODO: rename
-export * from './inputs/Input'
+export * from './Inputs/Input'
 export * from './Modal/Modal'
 export * from './Notification/Notification'
 export * from './Pagination/Pagination'

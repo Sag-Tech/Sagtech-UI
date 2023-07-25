@@ -6,20 +6,23 @@ interface AnimateType extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonE
   text?: string
 }
 
-const AnimationButton: React.FC<AnimateType> = ({ text }) => {
+const AnimationButton: React.FC<AnimateType> = ({ text = 'Some txt', ...rest }) => {
   return (
    <div className='inline-block'>
       <button
-      className='buttonAnim  bg-pr_purple  px-8px py-8px items-center rounded-circle buttonAnims overflow-hidden'
+      {...rest}
+      className='buttonAnim  bg-pr_purple  items-center rounded-circle buttonAnims overflow-hidden'
     >
-      <span
-        className='text-white  whitespace-nowrap animation font-["Manrope"] font-bold leading-24 pr-16px'
+     <div className='flex items-center '>
+     <span
+        className='text-white  whitespace-nowrap animation font-["Manrope"] font-bold leading-24'
       >
         {text}
       </span>
-      <div className='iconStyles'>
+      <div role='contentinfo' className='iconStyles'>
       <Icon icon='arrow' size={32} viewBox='0 0 32 32' color='#6D3EF1' />
       </div>
+     </div>
     </button>
    </div>
   )

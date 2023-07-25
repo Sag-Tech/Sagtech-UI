@@ -11,7 +11,7 @@ const Template: StoryFn = (arg) => <Pagination {...arg}/>
 export const PaginationDefault = Template.bind({})
 
 PaginationDefault.args = {
-  children: '1',
+  text: '1',
   type: 'button',
   state: 'default',
   disabled: false,
@@ -23,7 +23,7 @@ const PaginationActive: StoryFn = (arg) => <Pagination {...arg}/>
 export const PagActive = PaginationActive.bind({})
 
 PagActive.args = {
-  children: '1',
+  text: '1',
   type: 'button',
   state: 'active',
   disabled: false,
@@ -35,7 +35,7 @@ const PaginationDisabled: StoryFn = (arg) => <Pagination {...arg}/>
 export const PagDisabled = PaginationDisabled.bind({})
 
 PagDisabled.args = {
-  children: '1',
+  text: '1',
   type: 'button',
   disabled: true,
   state: 'disabled',
