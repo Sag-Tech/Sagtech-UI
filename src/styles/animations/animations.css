@@ -37,7 +37,7 @@ animation: slide-down 300ms ease-out forwards;
 
 .buttonAnim:hover .animation {
   width: 100%;
-  transition: width 1.1s ease-out;
+  transition: width 1s ease-in-out;
 }
 
 .buttonAnim:hover .iconStyles {
@@ -50,16 +50,17 @@ animation: slide-down 300ms ease-out forwards;
 
 
 .buttonAnim {
-  width: 48px;
   display: inline-flex;
-  transition: width 0.1s ease;
+  overflow:hidden;
+  max-width: 48px;
+  transition:max-width 0.1s ease;
   padding: 8px;
 }
 
 .buttonAnims:hover {
-  width: 100%;
-  transition: width 0.7s ease;
   padding-left: 24px;
+  max-width: 350px;
+  transition:max-width 0.7s ease-in;
 }
 
 @keyframes slide-down {
