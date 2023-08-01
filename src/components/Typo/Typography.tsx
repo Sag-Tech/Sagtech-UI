@@ -5,12 +5,13 @@ import typographyConst from './TypographyConst/TypographyConst'
 
 export interface TypographyTypes {
   text?: string
+  className?: string
   tag?: VariantTypoTags
   type?: VariantTypoTagsStyles
   color?: VariantTypoColors
 }
 
-const Typography: React.FC<TypographyTypes> = ({ text, tag = 'p', type = 'BodyL', color = 'text-white_1' }) => {
+const Typography: React.FC<TypographyTypes> = ({ text, tag = 'p', type = 'BodyL', className, color = 'text-white_1' }) => {
   const tagDefault = tag === 'p'
   const Component = useMemo(() => tag, [tag])
   const classes = useMemo(
@@ -39,7 +40,7 @@ const Typography: React.FC<TypographyTypes> = ({ text, tag = 'p', type = 'BodyL'
 
   return (
     <Component
-      className={`${classes}`}
+      className={`${classes} ${className !== undefined ? className : ''}`}
     >
         {text}
     </Component>

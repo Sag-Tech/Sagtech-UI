@@ -88,6 +88,11 @@ body {
           mask-composite: exclude; 
 }
 
+
 .fix-images:first-child img {
   object-position: left;
+}
+
+.radius::before{
+  border-radius: 12px;
 }
