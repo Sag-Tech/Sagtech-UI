@@ -19,17 +19,18 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
   children
 }) => {
   return (
-    <div className='inline-block'>
+    <div data-tid="avatar-card" className='inline-block'>
       <CardWrapper stoke='1' rounded='24' className='xl:p-24px p-16px'>
         <CardWrapper
           stoke='2'
           className='radius rounded-[12px] flex !justify-center xl:!w-[200px] xl:!h-[200px] !w-[176px] !h-[176px] items-center'
         >
-          <div className={imgSize}>
+          <div data-tid="avatar-img" className={imgSize}>
             {React.cloneElement(children as React.ReactElement, {
               className: `${
                 classes !== undefined ? classes : ''
-              } object-cover w-full h-full`
+              } object-cover w-full h-full`,
+              'data-tid': 'img'
             })}
           </div>
         </CardWrapper>
