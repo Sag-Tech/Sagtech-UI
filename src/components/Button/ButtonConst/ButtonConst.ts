@@ -2,7 +2,7 @@ const buttonConst = {
   basicStyles:
     'leading-24 flex justify-center items-center gap-8px font-bold rounded-[16px]',
   primaryButton:
-    ' bg-pr_purple border-[1px] border-solid border-pr_purple transition-all ',
+    ' bg-pr_purple  transition-all ',
   primaryButtonTextColor: 'text-white',
   primaryButtonNewColor: 'text-pr_purple',
   tabButtonBase:
@@ -15,7 +15,7 @@ const buttonConst = {
   smallSize: 'py-4px px-16px text-14 rounded-[50px]',
   largeSize: 'py-16px px-40px leading-24',
   hoverAnimation:
-    'hover:border-[6px] hover:border-solid hover:border-black_1 hover:shadow-3xl hover:transition-all',
+    'hover:shadow-2xl hover:transition-all',
   primaryDisabledStyles: 'disabled:bg-[#545259] disabled:text-grey_2',
   secondaryDisabledStyles: 'disabled:border-grey_2 disabled:text-grey_2',
   loadingPrimary: 'bg-[#545259] text-grey_2',
