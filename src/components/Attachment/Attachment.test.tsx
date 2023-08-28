@@ -21,16 +21,6 @@ describe('Attachment component', () => {
     expect(variantElement).toHaveClass('text-[10px] font-semibold leading-[18px]')
   })
 
-  it('Attachment error state', () => {
-    const { getByTestId } = render(<Attachment state='error' />)
-    const nameElement = getByTestId('attach-name')
-    const variantElement = getByTestId('attach-variant-span')
-    expect(nameElement).toBeInTheDocument()
-    expect(variantElement).toBeInTheDocument()
-    expect(variantElement).toHaveClass('text-error')
-    expect(nameElement).toHaveClass('text-grey_4')
-  })
-
   it('Attachment default state', () => {
     const { getByTestId } = render(<Attachment state='default' />)
     const nameElement = getByTestId('attach-name')

@@ -57,7 +57,7 @@ const Pagination: React.FC<PaginationType> = ({
     >
       <span className="w-[24px]">{text}</span>
       <Icon
-        icon="paginatioArrow"
+        icon="paginationArrow"
         color={iconColors}
         className={arrowPosition === 'right' ? 'rotate-180' : ''}
       />

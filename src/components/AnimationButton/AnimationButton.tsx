@@ -22,10 +22,10 @@ const AnimationButton: React.FC<AnimateType> = ({
     <button
       type="button"
       {...rest}
-      className="buttonAnim  buttonAnims  items-center overflow-hidden rounded-circle bg-pr_purple"
+      className="buttonAnim buttonAnims items-center overflow-hidden rounded-circle bg-pr_purple"
     >
-      <div className="flex items-center ">
-        <span className='animation  whitespace-nowrap font-["Manrope"] font-bold leading-24 text-white'>
+      <div className="flex items-center">
+        <span className='animation whitespace-nowrap font-["Manrope"] font-bold leading-24 text-white'>
           {text}
         </span>
         <div role="contentinfo" className="iconStyles">

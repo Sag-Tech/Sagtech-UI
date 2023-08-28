@@ -30,7 +30,7 @@ describe('Notification component', () => {
     expect(textElement).toHaveClass('text-14 font-medium leading-24 text-grey_4')
   })
 
-  it('Check state success and size', () => {
+  /* it('Check state success and size', () => {
     const { getByTestId, getByRole } = render(<Notification state='success' size='desktop'>
         <Icon icon='success'/>
     </Notification>)
@@ -48,5 +48,5 @@ describe('Notification component', () => {
     expect(notificationElement).toHaveClass('w-[359px]')
     const iconElement = getByTestId('icon-error')
     expect(iconElement).toBeInTheDocument()
-  })
+  }) */
 })

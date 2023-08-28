@@ -1,10 +1,6 @@
-export type VariantTypoRounded =
-  | '24'
-  | '40'
+export type VariantTypoRounded = '24' | '40' | '16' | '12'
 
-export type VariantTypoStoke =
-  | '1'
-  | '2'
+export type VariantTypoStoke = '1' | '2'
 
 export type VariantTypoColors =
   | 'black_1'
@@ -27,3 +23,4 @@ export type VariantTypoColors =
   | 'error'
   | 'warning'
   | 'success'
+  | 'backdrop_2'

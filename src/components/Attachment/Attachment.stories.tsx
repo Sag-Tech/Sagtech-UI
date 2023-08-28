@@ -1,10 +1,12 @@
-import { type Meta, type StoryFn } from '@storybook/react'
+import type { StoryFn, Meta } from '@storybook/react'
 import Attachment from './Attachment'
 
-export default {
+const meta: Meta<typeof Attachment> = {
   title: 'Attachment',
   component: Attachment
-} satisfies Meta
+}
+
+export default meta
 
 const AttachmentStory: StoryFn = (arg) => <Attachment {...arg}/>
 
@@ -31,7 +33,7 @@ const AttachmentStoryError: StoryFn = (arg) => <Attachment {...arg}/>
 export const AttachError = AttachmentStoryError.bind({})
 
 AttachError.args = {
-  type: 'file',
+  isError: true,
   state: 'error',
   accept: '.png, .jpg, .pdf, .gif'
 }

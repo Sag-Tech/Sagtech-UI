@@ -1,13 +1,9 @@
-export type VariantTypoTagsStyles =
-  | 'BodyL'
-  | 'BodyS'
-  | 'Labels'
-  | 'Info'
-  | 'Buttons'
-
 export type VariantTypoIconName =
   | 'users'
   | 'calendar'
+  | 'job'
+  | 'salary'
+  | 'location'
 
 export type VariantTypoColorsText =
   | 'text-black_1'

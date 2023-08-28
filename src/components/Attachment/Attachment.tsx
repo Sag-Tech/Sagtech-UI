@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React, { useState, type InputHTMLAttributes, type DetailedHTMLProps, useMemo } from 'react'
 import '../../styles/globals.css'
 import { Icon } from '../IconComponent/Icon'
@@ -6,19 +7,24 @@ import classNames from 'classnames'
 
 interface AttachmentTypes extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
   children?: React.ReactNode
-  state?: 'active' | 'default' | 'error' | 'disabled'
+  state?: 'active' | 'default' | 'disabled'
   accept?: '.png, .jpg, .pdf, .gif'
+  isError?: boolean
+  onUpload?: (files: File[] | null) => void
+  multiple?: boolean
 }
 
-const Attachment: React.FC<AttachmentTypes> = ({ state, accept, children, ...rest }) => {
-  const [value, setValue] = useState('')
+const Attachment: React.FC<AttachmentTypes> = ({
+  state,
+  accept,
+  children,
+  isError = false,
+  onUpload,
+  multiple = true,
+  ...rest
+}) => {
   const [hover, setHover] = useState(false)
-
-  const inputHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    const fullPath: string = event.target.value
-    const fileName = fullPath.substring(fullPath.lastIndexOf('\\') + 1)
-    setValue(fileName)
-  }
+  const [files, setFiles] = useState<File[] | null>(null)
 
   const mouseHandlerOver = (): void => {
     setHover(true)
@@ -30,8 +36,9 @@ const Attachment: React.FC<AttachmentTypes> = ({ state, accept, children, ...res
 
   const nameStyles = classNames({
     [attachmentConsts.attacmentNameBasic]: true,
-    [attachmentConsts.erroAndDefAttachName]: state === 'default' || state === 'error',
-    [attachmentConsts.activeAttachmentName]: state === 'active' || (state === 'default' && hover),
+    [attachmentConsts.erroAndDefAttachName]: state === 'default' || isError,
+    [attachmentConsts.activeAttachmentName]:
+      state === 'active' || (state === 'default' && hover),
     [attachmentConsts.disabledAttachName]: state === 'disabled'
   })
 
@@ -40,22 +47,73 @@ const Attachment: React.FC<AttachmentTypes> = ({ state, accept, children, ...res
     [attachmentConsts.defaultAttachmentVariants]: true
   })
 
-  const iconColors = useMemo(() => `
-  ${hover && state === 'default' ? '#F8F8F8' : ''}
-  ${state !== 'active' && state !== 'disabled' && !hover ? '#B5B5B9' : ''}
-  ${state === 'active' ? '#F8F8F8' : ''}
-  ${state === 'disabled' ? '#83838A' : ''}
-  `, [state, hover])
+  const iconColors = useMemo(
+    () => `
+    ${hover && state === 'default' ? '#F8F8F8' : ''}
+    ${state !== 'active' && state !== 'disabled' && !hover ? '#B5B5B9' : ''}
+    ${state === 'active' ? '#F8F8F8' : ''}
+    ${state === 'disabled' ? '#83838A' : ''}
+    `,
+    [state, hover]
+  )
+
+  const handleFileChange = (e: React.ChangeEvent) => {
+    const input = e.target as HTMLInputElement
+
+    if (input.files) {
+      const filesArr = Array.from(input.files)
+
+      if (onUpload) {
+        onUpload(filesArr)
+      }
+
+      setFiles(filesArr)
+    }
+  }
+
+  const fileName = useMemo(() => {
+    if (files && files.length > 0) {
+      const inf = files[files.length - 1]
+      return inf.name
+    }
+    return null
+  }, [files])
 
   return (
-     <label onMouseOver={state === 'default' ? mouseHandlerOver : undefined} onMouseLeave={state === 'default' ? mouseHandlerLeave : undefined} className='inline-flex items-center gap-12px pointer cursor-pointer'>
-        <Icon icon='attach' color={iconColors} />
-        <input onChange={inputHandler} className='hidden' accept={accept} {...rest} />
+     <div
+      onMouseOver={state === 'default' ? mouseHandlerOver : undefined}
+      onMouseLeave={state === 'default' ? mouseHandlerLeave : undefined}
+    >
+      <label
+        htmlFor="input-file"
+        className="pointer inline-flex cursor-pointer items-center gap-12px"
+      >
+        <Icon icon="attach" size={24} color={iconColors} />
+        <input
+          id="input-file"
+          onChange={(e) => { handleFileChange(e) }}
+          multiple={multiple}
+          className="hidden"
+          accept={accept}
+          {...rest}
+        />
         <div>
-          <p data-tid='attach-name' className={nameStyles}>{value.length > 0 ? value : 'Attach file'}</p>
-          <p data-tid='attach-variant' className={variantStyle}><span data-tid='attach-variant-span'className={state === 'error' ? 'text-error' : ''}>(PDF, PNG, JPG, GIF;</span> max. 10mb)</p>
+          <p data-tid="attach-name" className={nameStyles}>
+            {files && files.length > 0 ? fileName : 'Attach file'}
+          </p>
+          <p data-tid="attach-variant" className={variantStyle}>
+            <span
+              data-tid="attach-variant-span"
+              className={isError ? 'text-error' : ''}
+            >
+              (PDF, PNG, JPG, GIF;
+            </span>
+            {' '}
+            max. 10mb)
+          </p>
         </div>
-     </label>
+      </label>
+    </div>
   )
 }
 
