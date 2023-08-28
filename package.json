@@ -1,5 +1,5 @@
 {
-  "name": "sagtech-common-components",
+  "name": "@sagtech/common-components",
   "version": "0.0.1",
   "main": "src/index.tsx",
   "description": "common-components",
