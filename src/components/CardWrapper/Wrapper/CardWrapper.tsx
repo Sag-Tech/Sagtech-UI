@@ -10,7 +10,7 @@ interface CardWrapperTypes {
   stoke?: VariantTypoStoke
 }
 
-export const CardWrapper: React.FC<CardWrapperTypes> = ({ className, children, rounded = '24', stoke = '2' }) => {
+const CardWrapper: React.FC<CardWrapperTypes> = ({ className, children, rounded = '24', stoke = '2' }) => {
   const stoke1 = stoke === '1'
   const stoke2 = stoke === '2'
   const rounded24 = rounded === '24'
@@ -43,3 +43,5 @@ export const CardWrapper: React.FC<CardWrapperTypes> = ({ className, children, r
     </div>
   )
 }
+
+export default CardWrapper

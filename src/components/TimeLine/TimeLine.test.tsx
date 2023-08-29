@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { TimeLine } from './TimeLine'
+import TimeLine from './TimeLine'
 
 interface SwiperProps {
   children: React.ReactNode

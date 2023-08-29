@@ -1,5 +1,5 @@
 import type { StoryFn, Meta } from '@storybook/react'
-import { AvatarCard } from './AvatarCard'
+import AvatarCard from './AvatarCard'
 
 const meta: Meta<typeof AvatarCard> = {
   title: 'Avatar Card',

@@ -1,5 +1,5 @@
 import { type VariantTypoTagsStyles } from '../Typo/types'
-import { Typography } from '../Typo/Typography'
+import Typography from '../Typo/Typography'
 import classnames from 'classnames'
 import React from 'react'
 import type {
@@ -17,7 +17,7 @@ interface PointTypes {
   iconName?: VariantTypoIconName
   icon?: boolean
 }
-export const Point: React.FC<PointTypes> = ({
+const Point: React.FC<PointTypes> = ({
   text,
   type,
   textColor,
@@ -55,3 +55,5 @@ export const Point: React.FC<PointTypes> = ({
     </div>
   )
 }
+
+export default Point

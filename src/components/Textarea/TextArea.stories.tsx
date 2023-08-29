@@ -1,10 +1,12 @@
 import { type Meta, type StoryFn } from '@storybook/react'
-import { TextArea } from './TextArea'
+import TextArea from './TextArea'
 
-export default {
+const meta: Meta<typeof TextArea> = {
   title: 'Textarea types',
   component: TextArea
-} satisfies Meta
+}
+
+export default meta
 
 const DefaultTextArea: StoryFn = (arg) => <TextArea placeholder='Text here, please...' {...arg}/>
 

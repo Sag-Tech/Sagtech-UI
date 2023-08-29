@@ -1,5 +1,5 @@
 import type { StoryFn, Meta } from '@storybook/react'
-import { CardWrapper } from './CardWrapper'
+import CardWrapper from './CardWrapper'
 
 const meta: Meta<typeof CardWrapper> = {
   title: 'CardWrapper',

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { SectionTag } from './SectionTag'
+import SectionTag from './SectionTag'
 
 describe('Section Tag component', () => {
   test('Get default size', () => {

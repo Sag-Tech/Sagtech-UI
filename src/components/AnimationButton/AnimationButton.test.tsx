@@ -1,6 +1,6 @@
 import { fireEvent, render } from '@testing-library/react'
 
-import { AnimationButton } from './AnimationButton'
+import AnimationButton from './AnimationButton'
 import { type IIconProps } from '@components/IconComponent/Icon'
 
 jest.mock('@components/IconComponent/Icon', () => ({

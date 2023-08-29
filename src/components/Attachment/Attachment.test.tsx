@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
-import { Attachment } from './Attachment'
+import Attachment from './Attachment'
 import { type IIconProps } from '@components/IconComponent/Icon'
 
 jest.mock('@components/IconComponent/Icon', () => ({

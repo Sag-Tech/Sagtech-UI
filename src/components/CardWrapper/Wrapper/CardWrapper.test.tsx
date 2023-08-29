@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { CardWrapper } from './CardWrapper'
+import CardWrapper from './CardWrapper'
 
 describe('Card Wrapper component', () => {
   test('Get styles', () => {

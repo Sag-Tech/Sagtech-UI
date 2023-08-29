@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { Point } from './Point'
+import Point from './Point'
 
 describe('Point component', () => {
   test('Get point default', () => {

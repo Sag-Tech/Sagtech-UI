@@ -1,5 +1,5 @@
 import { type StoryFn, type Meta } from '@storybook/react'
-import { Point } from './Point'
+import Point from './Point'
 
 const meta: Meta<typeof Point> = {
   title: 'Point',

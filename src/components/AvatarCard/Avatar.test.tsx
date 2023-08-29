@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import { AvatarCard } from './AvatarCard'
+import AvatarCard from './AvatarCard'
 
 describe('AvatarCard component', () => {
   it('AvatarCard render', () => {

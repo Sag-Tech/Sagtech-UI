@@ -1,5 +1,5 @@
 import { type StoryFn, type Meta } from '@storybook/react'
-import { DonutChart } from './DonutChart'
+import DonutChart from './DonutChart'
 
 const meta: Meta<typeof DonutChart> = {
   title: 'DonutChart',

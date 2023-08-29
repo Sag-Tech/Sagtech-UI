@@ -3,7 +3,7 @@ import React from 'react'
 import type { SVGProps } from 'react'
 import { content } from '../../assets/icons'
 import type { IAvailableIcons } from '../../assets/icons'
-import { Typography } from '../Typo/Typography'
+import Typography from '../Typo/Typography'
 
 export interface IIconProps {
   svgProps?: SVGProps<SVGSVGElement>
@@ -17,7 +17,7 @@ export interface IIconProps {
   classes?: string
 }
 
-export const Icon: React.FC<IIconProps> = ({
+const Icon: React.FC<IIconProps> = ({
   icon,
   size = 24,
   color = '#fff',
@@ -55,3 +55,5 @@ export const Icon: React.FC<IIconProps> = ({
 
   return <IconComponent />
 }
+
+export default Icon

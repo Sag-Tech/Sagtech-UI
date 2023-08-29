@@ -1,7 +1,7 @@
 import React, { type MouseEventHandler } from 'react'
 import '../../styles/globals.css'
-import { Icon } from '../IconComponent/Icon'
-import { Button } from '../Button/Button'
+import Icon from '../IconComponent/Icon'
+import Button from '../Button/Button'
 import notificationConsts from './NotificationConsts/notificationConsts'
 import classNames from 'classnames'
 import type { IAvailableIcons } from '../../assets/icons'
@@ -19,7 +19,7 @@ interface NotificationTypes {
   onClickButtonFirst?: MouseEventHandler
 }
 
-export const Notification: React.FC<NotificationTypes> = ({
+const Notification: React.FC<NotificationTypes> = ({
   title,
   text,
   size,
@@ -71,3 +71,5 @@ export const Notification: React.FC<NotificationTypes> = ({
     </div>
   )
 }
+
+export default Notification

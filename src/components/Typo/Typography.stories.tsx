@@ -1,5 +1,5 @@
 import { type StoryFn, type Meta } from '@storybook/react'
-import { Typography } from './Typography'
+import Typography from './Typography'
 
 const meta: Meta<typeof Typography> = {
   title: 'Typography',

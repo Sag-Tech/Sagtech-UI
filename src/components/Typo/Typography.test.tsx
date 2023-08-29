@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { Typography } from './Typography'
+import Typography from './Typography'
 
 describe('Font component', () => {
   test('Get h1 font', () => {

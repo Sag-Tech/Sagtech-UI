@@ -11,7 +11,7 @@ interface TextAreaProps extends DetailedHTMLProps<TextareaHTMLAttributes<HTMLTex
   isError?: boolean
 }
 
-export const TextArea: React.FC<TextAreaProps> = ({ state, value, classes, isError, disabled, errorMessage, ...rest }) => {
+const TextArea: React.FC<TextAreaProps> = ({ state, value, classes, isError, disabled, errorMessage, ...rest }) => {
   const textareaStyles = useMemo(
     () => classNames({
       [textareaConsts.basicStyles]: true,
@@ -39,3 +39,5 @@ export const TextArea: React.FC<TextAreaProps> = ({ state, value, classes, isErr
     </div>
   )
 }
+
+export default TextArea

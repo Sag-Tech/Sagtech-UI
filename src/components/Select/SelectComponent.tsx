@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import Select, { components, type DropdownIndicatorProps } from 'react-select'
 import '../../styles/globals.css'
-import { Icon } from '../IconComponent/Icon'
+import Icon from '../IconComponent/Icon'
 import getCustomStyles from './CustomStyles/customStyles'
 
 export interface Option {
@@ -27,7 +27,7 @@ const DropdownIndicator = (props: DropdownIndicatorProps): JSX.Element => {
   )
 }
 
-export const SelectComponent: React.FC<CustomSelectProps> = ({ state, errorText, labelText, options, disabled, isMenuOpen, onMenuToggle }) => {
+const SelectComponent: React.FC<CustomSelectProps> = ({ state, errorText, labelText, options, disabled, isMenuOpen, onMenuToggle }) => {
   const customStyles = getCustomStyles(state as 'default' | 'active' | 'error')
 
   const errorCheck = useMemo(() => {
@@ -54,3 +54,5 @@ export const SelectComponent: React.FC<CustomSelectProps> = ({ state, errorText,
       </div>
   )
 }
+
+export default SelectComponent

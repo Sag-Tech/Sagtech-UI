@@ -10,7 +10,7 @@ interface DonutChartTypes {
   colors?: string[]
   size?: number
 }
-export const DonutChart: React.FC<DonutChartTypes> = ({
+const DonutChart: React.FC<DonutChartTypes> = ({
   value = [100],
   width = '100%',
   type = 'donut',
@@ -31,3 +31,5 @@ export const DonutChart: React.FC<DonutChartTypes> = ({
     </div>
   )
 }
+
+export default DonutChart

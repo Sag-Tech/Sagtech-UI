@@ -1,9 +1,9 @@
 import React, { type MouseEventHandler, useMemo, type ButtonHTMLAttributes, type DetailedHTMLProps } from 'react'
 import '../../styles/globals.css'
-import { Icon } from '../IconComponent/Icon'
+import Icon from '../IconComponent/Icon'
 import useButtonStyles from './useButtonStyles/useButtonStyles'
 import { type VariantTypoTagsStyles } from '../Typo/types'
-import { Typography } from '../Typo/Typography'
+import Typography from '../Typo/Typography'
 
 export interface ButtonTypes extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   loadingType?: boolean
@@ -20,7 +20,7 @@ export interface ButtonTypes extends DetailedHTMLProps<ButtonHTMLAttributes<HTML
   onClick?: MouseEventHandler
 }
 
-export const Button: React.FC<ButtonTypes> = ({
+const Button: React.FC<ButtonTypes> = ({
   text,
   disabled,
   buttonSize = 'large',
@@ -78,3 +78,5 @@ export const Button: React.FC<ButtonTypes> = ({
     </button>
   )
 }
+
+export default Button

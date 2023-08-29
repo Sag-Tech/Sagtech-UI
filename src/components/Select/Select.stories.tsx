@@ -1,5 +1,5 @@
 import { type Meta, type StoryFn } from '@storybook/react'
-import { SelectComponent } from './SelectComponent'
+import SelectComponent from './SelectComponent'
 import { useState } from 'react'
 
 const meta: Meta<typeof SelectComponent> = {

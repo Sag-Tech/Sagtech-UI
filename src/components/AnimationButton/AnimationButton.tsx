@@ -3,7 +3,7 @@ import React, {
   type DetailedHTMLProps
 } from 'react'
 import '../../styles/globals.css'
-import { Icon } from '../IconComponent/Icon'
+import Icon from '../IconComponent/Icon'
 
 interface AnimateType
   extends DetailedHTMLProps<
@@ -13,7 +13,7 @@ interface AnimateType
   text?: string
 }
 
-export const AnimationButton: React.FC<AnimateType> = ({
+const AnimationButton: React.FC<AnimateType> = ({
   text = 'Some txt',
   ...rest
 }) => {
@@ -37,3 +37,5 @@ export const AnimationButton: React.FC<AnimateType> = ({
 
   )
 }
+
+export default AnimationButton

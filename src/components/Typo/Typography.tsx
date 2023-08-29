@@ -12,7 +12,7 @@ export interface TypographyTypes {
   color?: VariantTypoColors
 }
 
-export const Typography: React.FC<TypographyTypes> = ({
+const Typography: React.FC<TypographyTypes> = ({
   children,
   text,
   className,
@@ -54,3 +54,4 @@ export const Typography: React.FC<TypographyTypes> = ({
     </Component>
   )
 }
+export default Typography

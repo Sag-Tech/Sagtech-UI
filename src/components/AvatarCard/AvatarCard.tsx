@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../styles/globals.css'
-import { CardWrapper } from '../CardWrapper/Wrapper/CardWrapper'
-import { Typography } from '../Typo/Typography'
+import CardWrapper from '../CardWrapper/Wrapper/CardWrapper'
+import Typography from '../Typo/Typography'
 
 interface AvatarCardProps {
   name?: string
@@ -11,7 +11,7 @@ interface AvatarCardProps {
   imgSize?: string
 }
 
-export const AvatarCard: React.FC<AvatarCardProps> = ({
+const AvatarCard: React.FC<AvatarCardProps> = ({
   name = 'Some txt',
   info,
   classes,
@@ -48,3 +48,5 @@ export const AvatarCard: React.FC<AvatarCardProps> = ({
     </div>
   )
 }
+
+export default AvatarCard

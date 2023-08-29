@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React, { useState, type InputHTMLAttributes, type DetailedHTMLProps, useMemo } from 'react'
 import '../../styles/globals.css'
-import { Icon } from '../IconComponent/Icon'
+import Icon from '../IconComponent/Icon'
 import attachmentConsts from './AttachmentConsts/attachmentConsts'
 import classNames from 'classnames'
 
@@ -14,7 +14,7 @@ interface AttachmentTypes extends DetailedHTMLProps<InputHTMLAttributes<HTMLInpu
   multiple?: boolean
 }
 
-export const Attachment: React.FC<AttachmentTypes> = ({
+const Attachment: React.FC<AttachmentTypes> = ({
   state,
   accept,
   children,
@@ -116,3 +116,5 @@ export const Attachment: React.FC<AttachmentTypes> = ({
     </div>
   )
 }
+
+export default Attachment

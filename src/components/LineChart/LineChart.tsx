@@ -18,7 +18,7 @@ interface LineChartTypes {
     }>
   }>
 }
-export const LineChart: React.FC<LineChartTypes> = ({ min = 0, max = 100, tickAmountX = 2, series, type = 'line', width = '100%', height = '100%' }) => {
+const LineChart: React.FC<LineChartTypes> = ({ min = 0, max = 100, tickAmountX = 2, series, type = 'line', width = '100%', height = '100%' }) => {
   const options = getChartOptions(min, max, tickAmountX)
   return (
     <Chart
@@ -30,3 +30,5 @@ export const LineChart: React.FC<LineChartTypes> = ({ min = 0, max = 100, tickAm
     />
   )
 }
+
+export default LineChart

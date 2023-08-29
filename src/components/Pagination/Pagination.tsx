@@ -4,7 +4,7 @@ import React, {
   type DetailedHTMLProps
 } from 'react'
 import '../../styles/globals.css'
-import { Icon } from '../IconComponent/Icon'
+import Icon from '../IconComponent/Icon'
 import paginationConsts from './PaginationConst/PaginationConst'
 import classNames from 'classnames'
 
@@ -14,7 +14,7 @@ interface PaginationType extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButt
   arrowPosition?: 'left' | 'right'
 }
 
-export const Pagination: React.FC<PaginationType> = ({
+const Pagination: React.FC<PaginationType> = ({
   text,
   state,
   disabled,
@@ -64,3 +64,5 @@ export const Pagination: React.FC<PaginationType> = ({
     </button>
   )
 }
+
+export default Pagination

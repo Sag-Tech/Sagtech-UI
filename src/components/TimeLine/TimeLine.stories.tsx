@@ -1,5 +1,5 @@
 import { type Meta, type StoryFn } from '@storybook/react'
-import { TimeLine } from './TimeLine'
+import TimeLine from './TimeLine'
 
 const info = [
   {
@@ -24,10 +24,12 @@ const info = [
 
 const images = ['animation-one', 'animation-two', 'animation-three', 'animation-four', 'animation-five', 'animation-six']
 
-export default {
+const meta: Meta<typeof TimeLine> = {
   title: 'TimeLine',
   component: TimeLine
-} satisfies Meta
+}
+
+export default meta
 
 const TimeLineDefault: StoryFn = (arg) => {
   return (
