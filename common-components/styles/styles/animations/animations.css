@@ -1,76 +1,202 @@
-.react-select__indicator-separator {
+  .react-select__indicator-separator {
     display: none !important;
-}
-
-.react-select__indicator {
+  }
+  
+  .react-select__indicator {
     padding: 0 !important;
-}
-
-.react-select__value-container {
+  }
+  
+  .react-select__value-container {
     padding: 0 !important;
-}
-
-.modalAnim {
+  }
+  
+  .modalAnim {
   animation: slide-down 300ms ease-out forwards;
-}
-
-@keyframes scaleIn {
+  }
+  
+  @keyframes scaleIn {
     0% {
         opacity: 0;
         transform: scale(0.9);
     }
-
+  
     50% {
         opacity: 0.3;
     }
-
+  
     100% {
         opacity: 1;
         transform: scale(1);
     }
-}
+  }
   .animation {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    width: 0px;
+    overflow: hidden;
+    transition: width 0.1s ease;
   }
   
-  .buttonAnim:hover .animation {
-    opacity: 1;
-    transform: translateX(0);
-    transition: 0.8s;
-  }
-
-  .buttonAnim:hover .iconStyles {
-    transform: translateX(0);
-    transition: 0.8s;
-  } 
-
-  .iconStyles{
-     transform: translateX(-446%);
-     transition: 0.5s;
-  }
-
-
-  .buttonAnims {
-    width: 25.137%;
-    display: inline-flex;
-    transition: 0.5s;
-  }
-
-  .buttonAnims:hover {
+  .button-start:hover .animation {
     width: 100%;
-    transition: 0.789s;
-    padding-left: 24px;
+    transition: width 0.8s ease-in-out;
   }
-
+  
+  .button-start:hover .iconStyles {
+    padding-left: 16px;
+  } 
+  
+  .iconStyles{
+    padding-left: 0px;
+  } 
+  
+  
+  .buttonAnim {
+    display: inline-flex;
+    max-width: 48px;
+    transition:max-width 0.1s ease;
+    padding: 8px;
+  }
+  
+  .button-start:hover .buttonAnims{
+    padding-left: 24px;
+    max-width: 350px;
+    transition:max-width 0.75s ease-in-out;
+  }
+  
   @keyframes slide-down {
     from {
       opacity: 0;
-      transform: translateY(-3rem);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+      transform: scale(0.9);
   }
+
+  50% {
+      opacity: 0.3;
+  }
+
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+.animation {
+  width: 0px;
+  overflow: hidden;
+  transition: width 0.1s ease;
+}
+.buttonAnim:hover .animation,
+.burgerLink:hover .buttonAnim .animation {
+  width: 100%;
+  transition: width 0.9s ease-in-out;
+}
+
+.buttonAnim:hover .iconStyles,
+ .burgerLink:hover .buttonAnim .iconStyles {
+  padding-left: 16px;
+} 
+
+.iconStyles{
+  padding-left: 0px;
+} 
+
+
+.buttonAnim {
+  display: inline-flex;
+  max-width: 48px;
+  transition:max-width 0.1s ease;
+  padding: 8px;
+}
+
+.buttonAnims:hover,
+.burgerLink:hover .buttonAnims{
+  padding-left: 24px;
+  max-width: 350px;
+  transition:max-width 0.83s ease-in-out;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animation-images {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.animation-images.fade-out {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.animation-images.fade-in {
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 1099px)  {
+  .tech-close {
+    max-height: 232px;
+    transition: max-height 0.5s ease-out;
+  }
+}
+
+@media screen and (max-width: 767px)  {
+  .tech-close {
+    max-height: 384px;
+    transition: max-height 0.5s ease-out;
+  }
+}
+
+.contact-icons{
+  stroke: #B5B5B9;
+}
+.social-icons{
+  fill: #B5B5B9;
+}
+.hover-text{
+  transition: 0.3s;
+}
+.hover-contact:hover .contact-icons{
+  stroke: #F8F8F8;
+  transition: stroke 0.3s ease;
+}
+.hover-contact:hover .hover-text {
+  color: #F8F8F8;
+  transition: 0.3s;
+}
+
+.social-links:hover .social-icons{
+  fill: #F8F8F8;
+}
+
+.border-animation{
+  position: relative;
+}
+
+.border-animation::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 0px solid transparent;
+  transition: border 0.2s ease-out, box-shadow 0.2s ease-out;
+  box-shadow: 0px 0px 0px 0px rgba(109, 62, 241, 0);
+  border-radius: 21px;
+}
+
+.border-animation:hover::before {
+  border: 6px solid #070715;
+  box-shadow: 0px 0px 16px 0px rgba(109, 62, 241, 0.24);
+  border-radius: 21.5px;
+}
+
+.tech-open{
+  max-height: 1500px;
+  transition: max-height 0.8s ease-in-out
+}
