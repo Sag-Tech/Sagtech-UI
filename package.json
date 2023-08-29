@@ -1,6 +1,6 @@
 {
   "name": "@sagtech/common-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "src/index.tsx",
   "description": "common-components",
   "scripts": {
