@@ -11,6 +11,9 @@ import postcssImport from "postcss-import";
 import copy from "rollup-plugin-copy";
 
 import pkg from "./package.json";
+import autoprefixer from "autoprefixer";
+
+const tailwindConfig = require("./tailwind.config.js");
 
 const getPackageJson = () => {
   const base = { ...pkg };
@@ -43,19 +46,15 @@ const commonPlugins = [
     extensions: [".css"],
     extract: true,
     minimize: true,
-    use: [
-      [
-        "sass",
-        {
-          includePaths: ["./node_modules", "./src/styles"],
-        },
-      ],
-    ],
-    plugins: [
-      postcssImport(),
-      tailwindcss("./tailwind.config.js"),
-      require("autoprefixer"),
-    ],
+    // use: [
+    //   [
+    //     "sass",
+    //     {
+    //       includePaths: ["./node_modules", "./src/styles"],
+    //     },
+    //   ],
+    // ],
+    plugins: [autoprefixer(), tailwindcss(tailwindConfig)],
   }),
   image(),
   svgr({
@@ -80,11 +79,11 @@ const commonPlugins = [
     targets: [
       {
         src: "src/styles/Fonts",
-        dest: "common-components/assets",
+        dest: "public",
       },
       {
         src: "src/styles",
-        dest: "common-components/styles",
+        dest: "public",
       },
     ],
   }),
