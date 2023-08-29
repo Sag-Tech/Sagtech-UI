@@ -1,4 +1,4 @@
-import classNames from 'classnames'
+import classnames from 'classnames'
 import React, { useMemo } from 'react'
 import type { VariantTypoTagsStyles, VariantTypoColors, VariantTypoTags } from './types'
 import typographyConst from './TypographyConst/TypographyConst'
@@ -23,7 +23,7 @@ export const Typography: React.FC<TypographyTypes> = ({
   const tagDefault = tag === 'p'
   const Component = useMemo(() => tag, [tag])
   const classes = useMemo(
-    () => classNames({
+    () => classnames({
       [typographyConst.h1]: tag === 'h1',
       [typographyConst.h2]: tag === 'h2',
       [typographyConst.h3]: tag === 'h3',
