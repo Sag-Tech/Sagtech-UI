@@ -1,6 +1,6 @@
 import { type VariantTypoTagsStyles } from '../Typo/types'
 import Typography from '../Typo/Typography'
-import classnames from 'classnames'
+import classNames from 'classnames'
 import React from 'react'
 import type {
   VariantTypoColorsText,
@@ -28,7 +28,7 @@ const Point: React.FC<PointTypes> = ({
 }) => {
   return (
     <div
-      className={classnames('flex items-center gap-8px', styles)}
+      className={classNames('flex items-center gap-8px', styles)}
       data-tid="point"
     >
       {icon && (
@@ -41,7 +41,7 @@ const Point: React.FC<PointTypes> = ({
       )}
       {!icon && (
         <div
-          className={classnames('h-[8px] w-[8px] rounded-circle', circleColor)}
+          className={classNames('h-[8px] w-[8px] rounded-circle', circleColor)}
           data-tid="circle"
         />
       )}

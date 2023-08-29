@@ -1,4 +1,4 @@
-import classnames from 'classnames'
+import classNames from 'classnames'
 import React, { useMemo } from 'react'
 import sectionTagConst from './SectionTagConst/SectionTagConst'
 import { type VariantTypoSize } from './types'
@@ -11,7 +11,7 @@ interface SectionTagTypes {
 const SectionTag: React.FC<SectionTagTypes> = ({ className, size = 'small', children }) => {
   const classes = useMemo(
     () =>
-      classnames(
+      classNames(
         {
           [sectionTagConst.small]: size === 'small',
           [sectionTagConst.middle]: size === 'middle',
@@ -22,7 +22,7 @@ const SectionTag: React.FC<SectionTagTypes> = ({ className, size = 'small', chil
   )
 
   return (
-    <div className={classnames(
+    <div className={classNames(
       'w-full h-full border-1 border-solid border-pr_purple',
       className,
       classes
