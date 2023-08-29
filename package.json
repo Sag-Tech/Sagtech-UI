@@ -11,10 +11,9 @@
     "test:coverage-report": "./coverage-report.sh",
     "eject": "react-scripts eject",
     "lint": "eslint .",
-    "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "postinstall": "chmod +x coverage-check.sh && chmod +x coverage-report.sh && husky install"
+    "postinstall": "chmod +x coverage-check.sh && chmod +x coverage-report.sh"
   },
   "browserslist": {
     "production": [
@@ -80,7 +79,6 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-storybook": "^0.6.12",
     "file-loader": "^6.2.0",
-    "husky": "^8.0.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.6.1",
     "jest-environment-jsdom": "^29.6.1",
