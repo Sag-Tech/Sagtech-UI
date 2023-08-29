@@ -6,88 +6,136 @@
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Manrope', 'Orbitron',  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    background: #070715;
+  margin: 0;
+  padding: 0;
+  font-family: Manrope, Orbitron -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background: #070715;
 }
-.filterIcon{
-  filter: drop-shadow(0px 0px 16px rgba(109, 62, 241, 0.56)) drop-shadow(0px 0px 16px rgba(109, 62, 241, 0.56)) drop-shadow(0px 0px 16px rgba(109, 62, 241, 0.56));
-}
-.BorderGradient40Stroke1 {
-  position: relative;
-  background: rgba(255, 255, 255, 0.04)
-}
-.BorderGradient40Stroke1::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 40px; 
-  padding: 1px; 
-  background:linear-gradient(180deg, #0C0C1E 0%, #221546 100%); 
-  -webkit-mask: 
-     linear-gradient(#fff 0 0) content-box, 
-     linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude; 
+.filter_icon {
+  filter: drop-shadow(0px 0px 16px rgba(109, 62, 241, 0.56))
+    drop-shadow(0px 0px 16px rgba(109, 62, 241, 0.56))
+    drop-shadow(0px 0px 16px rgba(109, 62, 241, 0.56));
 }
 
-.BorderGradient40Stroke2 {
+
+.border_gradient_40_stroke_1 {
   position: relative;
-  background: rgba(255, 255, 255, 0.04)
+  background: rgba(255, 255, 255, 0.04);
 }
-.BorderGradient40Stroke2::before {
+.border_gradient_40_stroke_1::before {
   content: "";
   position: absolute;
+  pointer-events: none;
   inset: 0;
-  border-radius: 40px; 
-  padding: 1px; 
-  background:linear-gradient(180deg, #1F1F38 0%, #2F1E5E 100%);
-  -webkit-mask: 
-     linear-gradient(#fff 0 0) content-box, 
-     linear-gradient(#fff 0 0);
+  border-radius: 40px;
+  padding: 1px;
+  background: linear-gradient(180deg, #0c0c1e 0%, #221546 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude; 
+  mask-composite: exclude;
 }
 
-.BorderGradient24Stroke1 {
+.border_gradient_40_stroke_2 {
   position: relative;
-  background: rgba(255, 255, 255, 0.04)
+  background: rgba(255, 255, 255, 0.04);
 }
-.BorderGradient24Stroke1::before {
+.border_gradient_40_stroke_2::before {
   content: "";
   position: absolute;
+  pointer-events: none;
   inset: 0;
-  border-radius: 24px; 
-  padding: 1px; 
-  background:linear-gradient(180deg, #0C0C1E 0%, #221546 100%); 
-  -webkit-mask: 
-     linear-gradient(#fff 0 0) content-box, 
-     linear-gradient(#fff 0 0);
+  border-radius: 40px;
+  padding: 1px;
+  background: linear-gradient(180deg, #1f1f38 0%, #2f1e5e 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude; 
+  mask-composite: exclude;
 }
-
-.BorderGradient24Stroke2 {
+@media (max-width: 767px) {
+  .border_gradient_40_stroke_1::before,
+  .border_gradient_40_stroke_2::before {
+    border-radius: 24px;
+  }
+}
+.border_gradient_24_stroke_1 {
   position: relative;
-  background: rgba(255, 255, 255, 0.04)
+  background: rgba(255, 255, 255, 0.04);
 }
-.BorderGradient24Stroke2::before {
+.border_gradient_24_stroke_1::before {
   content: "";
   position: absolute;
+  pointer-events: none;
   inset: 0;
-  border-radius: 24px; 
-  padding: 1px; 
-  background:linear-gradient(180deg, #1F1F38 0%, #2F1E5E 100%);
-  -webkit-mask: 
-     linear-gradient(#fff 0 0) content-box, 
-     linear-gradient(#fff 0 0);
+  border-radius: 24px;
+  padding: 1px;
+  background: linear-gradient(180deg, #0c0c1e 0%, #221546 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude; 
+  mask-composite: exclude;
 }
 
+.border_gradient_24_stroke_2 {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+}
+.border_gradient_24_stroke_2::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  inset: 0;
+  border-radius: 24px;
+  padding: 1px;
+  background: linear-gradient(180deg, #1f1f38 0%, #2f1e5e 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+@media (max-width: 767px) {
+  .border_gradient_24_stroke_1::before,
+  .border_gradient_24_stroke_2::before {
+    border-radius: 16px;
+  }
+}
+
+.border_gradient_16_stroke_2 {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+}
+.border_gradient_16_stroke_2::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(180deg, #1f1f38 0%, #2f1e5e 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.border_gradient_12_stroke_2 {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+}
+.border_gradient_12_stroke_2::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(180deg, #1f1f38 0%, #2f1e5e 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.card_wrapper {
+  backdrop-filter: blur(4px);
+}
 
 .fix-images:first-child img {
   object-position: left;

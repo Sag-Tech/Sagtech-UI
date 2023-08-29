@@ -2,10 +2,12 @@ import { type Meta, type StoryFn } from '@storybook/react'
 import SelectComponent from './SelectComponent'
 import { useState } from 'react'
 
-export default {
+const meta: Meta<typeof SelectComponent> = {
   title: 'Select',
   component: SelectComponent
-} satisfies Meta
+}
+
+export default meta
 
 const Selectstory: StoryFn = (arg) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

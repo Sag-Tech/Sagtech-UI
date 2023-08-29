@@ -1,16 +1,16 @@
-export type VariantTypoTags =
-  | 'h1'
-  | 'h2'
-  | 'h3'
-  | 'h4'
-  | 'p'
+export type VariantTypoTags = 'h1' | 'h2' | 'h3' | 'h4' | 'p'
 
 export type VariantTypoTagsStyles =
   | 'BodyL'
+  | 'BodyM'
   | 'BodyS'
   | 'Labels'
+  | 'LabelsS'
   | 'Info'
+  | 'InfoBold'
   | 'Buttons'
+  | 'ButtonsS'
+  | 'ButtonsSBold'
 
 export type VariantTypoColors =
   | 'text-black_1'

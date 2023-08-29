@@ -4,7 +4,7 @@ import React, {
   type DetailedHTMLProps
 } from 'react'
 import '../../styles/globals.css'
-import { Icon } from '@components/IconComponent/Icon'
+import Icon from '../IconComponent/Icon'
 import paginationConsts from './PaginationConst/PaginationConst'
 import classNames from 'classnames'
 
@@ -57,7 +57,7 @@ const Pagination: React.FC<PaginationType> = ({
     >
       <span className="w-[24px]">{text}</span>
       <Icon
-        icon="paginatioArrow"
+        icon="paginationArrow"
         color={iconColors}
         className={arrowPosition === 'right' ? 'rotate-180' : ''}
       />

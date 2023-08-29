@@ -1,10 +1,12 @@
-import { type Meta, type StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import Pagination from './Pagination'
 
-export default {
+const meta: Meta<typeof Pagination> = {
   title: 'Pagination',
   component: Pagination
-} satisfies Meta
+}
+
+export default meta
 
 const Template: StoryFn = (arg) => <Pagination {...arg}/>
 

@@ -5,12 +5,18 @@ import { type VariantType } from './types'
 
 interface DonutChartTypes {
   value?: number[]
-  width?: number
+  width?: number | string
   type?: VariantType
   colors?: string[]
   size?: number
 }
-const DonutChart: React.FC<DonutChartTypes> = ({ value = [100], width = '100%', type = 'donut', colors = [], size = 8 }) => {
+const DonutChart: React.FC<DonutChartTypes> = ({
+  value = [100],
+  width = '100%',
+  type = 'donut',
+  colors = [],
+  size = 8
+}) => {
   const series = value
   const options = getChartOptions(colors, size)
 
@@ -25,4 +31,5 @@ const DonutChart: React.FC<DonutChartTypes> = ({ value = [100], width = '100%', 
     </div>
   )
 }
+
 export default DonutChart

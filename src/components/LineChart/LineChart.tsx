@@ -30,4 +30,5 @@ const LineChart: React.FC<LineChartTypes> = ({ min = 0, max = 100, tickAmountX =
     />
   )
 }
+
 export default LineChart

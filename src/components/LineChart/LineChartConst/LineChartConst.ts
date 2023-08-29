@@ -23,7 +23,7 @@ export const getChartOptions = (min: number, max: number, tickAmountX: number): 
     },
     colors: ['#6D3EF1', '#9271EE', '#CBBCF8'],
     xaxis: {
-      type: 'datetime',
+      type: 'category',
       tickAmount: tickAmountX,
       decimalsInFloat: 0,
       axisTicks: {
@@ -34,22 +34,6 @@ export const getChartOptions = (min: number, max: number, tickAmountX: number): 
         show: false
       },
       labels: {
-        formatter: function (value) {
-          const date = new Date(value)
-          const month = date.getMonth()
-          const year = date.getFullYear()
-          let quarter
-          if (month >= 0 && month <= 2) {
-            quarter = 'Q1'
-          } else if (month >= 3 && month <= 5) {
-            quarter = 'Q2'
-          } else if (month >= 6 && month <= 8) {
-            quarter = 'Q3'
-          } else {
-            quarter = 'Q4'
-          }
-          return `${quarter} ${year}`
-        },
         showDuplicates: false,
         show: true,
         hideOverlappingLabels: true,

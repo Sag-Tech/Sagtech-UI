@@ -39,7 +39,8 @@ const useButtonStyles = ({
           buttonSize === 'large' &&
           !(disabled ?? false) &&
           loadingType !== true,
-        [buttonConst.tabButtonHover]: variant === 'tabButton',
+        [buttonConst.tabButtonHover]:
+          variant === 'tabButton' && stateOfButton !== 'active',
         [buttonConst.basicStyles]: variant !== 'tabButton',
         [buttonConst.primaryDisabledStyles]: variant === 'primary',
         [buttonConst.loadingPrimary]: variant === 'primary' && loadingType,

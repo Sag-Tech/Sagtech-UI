@@ -3,13 +3,15 @@ import Modal from './Modal'
 import { ModalContext, ModalContextProvider } from 'src/context/ModalContext'
 import { useContext } from 'react'
 
-export default {
+const meta: Meta<typeof Modal> = {
   title: 'Modal types',
   component: Modal,
   decorators: [(Story) => {
     return <ModalContextProvider><Story /></ModalContextProvider>
   }]
-} satisfies Meta
+}
+
+export default meta
 
 const ModalDefault: StoryFn = (arg) => {
   const { isOpen, toggle } = useContext(ModalContext)

@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react'
-import Font from './Typography'
+import Typography from './Typography'
 
 describe('Font component', () => {
   test('Get h1 font', () => {
-    const { getByRole } = render(<Font text = 'Texth1' tag = 'h1' />)
+    const { getByRole } = render(<Typography text = 'Texth1' tag = 'h1' />)
     const paragraphElement = getByRole('heading', { level: 1 })
 
     expect(paragraphElement).toBeInTheDocument()
@@ -12,7 +12,7 @@ describe('Font component', () => {
   })
 
   test('Get h2 font', () => {
-    const { getByRole } = render(<Font text = 'Texth2' tag = 'h2' />)
+    const { getByRole } = render(<Typography text = 'Texth2' tag = 'h2' />)
     const paragraphElement = getByRole('heading', { level: 2 })
 
     expect(paragraphElement).toBeInTheDocument()
@@ -21,7 +21,7 @@ describe('Font component', () => {
   })
 
   test('Get h3 font', () => {
-    const { getByRole } = render(<Font text = 'Texth3' tag = 'h3' />)
+    const { getByRole } = render(<Typography text = 'Texth3' tag = 'h3' />)
     const paragraphElement = getByRole('heading', { level: 3 })
 
     expect(paragraphElement).toBeInTheDocument()
@@ -30,7 +30,7 @@ describe('Font component', () => {
   })
 
   test('Get h4 font', () => {
-    const { getByRole } = render(<Font text = 'Texth4' tag = 'h4' />)
+    const { getByRole } = render(<Typography text = 'Texth4' tag = 'h4' />)
     const paragraphElement = getByRole('heading', { level: 4 })
 
     expect(paragraphElement).toBeInTheDocument()
@@ -39,7 +39,7 @@ describe('Font component', () => {
   })
 
   test('Get BodyL font', () => {
-    const { getByText } = render(<Font text = 'Text BodyL' type = 'BodyL' />)
+    const { getByText } = render(<Typography text = 'Text BodyL' type = 'BodyL' />)
     const paragraphElement = getByText('Text BodyL')
 
     expect(paragraphElement.tagName).toBe('P')
@@ -48,7 +48,7 @@ describe('Font component', () => {
   })
 
   test('Get BodyS font', () => {
-    const { getByText } = render(<Font text = 'Text BodyS' type = 'BodyS' />)
+    const { getByText } = render(<Typography text = 'Text BodyS' type = 'BodyS' />)
     const paragraphElement = getByText('Text BodyS')
 
     expect(paragraphElement.tagName).toBe('P')
@@ -57,7 +57,7 @@ describe('Font component', () => {
   })
 
   test('Get Labels font', () => {
-    const { getByText } = render(<Font text = 'Text Labels' type = 'Labels' />)
+    const { getByText } = render(<Typography text = 'Text Labels' type = 'Labels' />)
     const paragraphElement = getByText('Text Labels')
 
     expect(paragraphElement.tagName).toBe('P')
@@ -66,7 +66,7 @@ describe('Font component', () => {
   })
 
   test('Get Info font', () => {
-    const { getByText } = render(<Font text = 'Text Info' type = 'Info' />)
+    const { getByText } = render(<Typography text = 'Text Info' type = 'Info' />)
     const paragraphElement = getByText('Text Info')
 
     expect(paragraphElement.tagName).toBe('P')
@@ -75,7 +75,7 @@ describe('Font component', () => {
   })
 
   test('Get Buttons font', () => {
-    const { getByText } = render(<Font text = 'Text Buttons' type = 'Buttons' />)
+    const { getByText } = render(<Typography text = 'Text Buttons' type = 'Buttons' />)
     const paragraphElement = getByText('Text Buttons')
 
     expect(paragraphElement.tagName).toBe('P')

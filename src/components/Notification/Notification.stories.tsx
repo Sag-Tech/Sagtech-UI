@@ -1,10 +1,12 @@
-import { type Meta, type StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import Notification from './Notification'
 
-export default {
+const meta: Meta<typeof Notification> = {
   title: 'Notification',
   component: Notification
-} satisfies Meta
+}
+
+export default meta
 
 const NotificationDescktop: StoryFn = (arg) => <Notification {...arg}/>
 
@@ -12,10 +14,10 @@ export const NotificationDesctopSize = NotificationDescktop.bind({})
 
 NotificationDesctopSize.args = {
   title: 'Thank you!',
-  text: 'You have been successfully subscribed on our newsletter! You can unsubscribe at any time.',
+  text: 'You have been successfully subscribed on our newsletter!',
   buttonTextSecond: 'Decline',
   buttonTextFirst: 'Accept',
-  state: 'success',
+  state: 'succes',
   size: 'desktop'
 }
 
@@ -25,9 +27,9 @@ export const NotificationMobileSize = NotificationMobile.bind({})
 
 NotificationMobileSize.args = {
   title: 'Thank you!',
-  text: 'You have been successfully subscribed on our newsletter! You can unsubscribe at any time.',
+  text: 'You have been successfully subscribed on our newsletter!',
   buttonTextSecond: 'Decline',
   buttonTextFirst: 'Accept',
-  state: 'success',
+  state: 'succes',
   size: 'mobile'
 }

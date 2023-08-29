@@ -1,10 +1,12 @@
-import { type Meta, type StoryFn } from '@storybook/react'
+import type { StoryFn, Meta } from '@storybook/react'
 import AnimationButton from './AnimationButton'
 
-export default {
+const meta: Meta<typeof AnimationButton> = {
   title: 'Animate Buttons',
   component: AnimationButton
-} satisfies Meta
+}
+
+export default meta
 
 const Template: StoryFn = (arg) => <AnimationButton {...arg}/>
 

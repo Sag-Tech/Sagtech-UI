@@ -1,10 +1,11 @@
-import { type Meta, type StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import Input from './Input'
 
-export default {
+const meta: Meta<typeof Input> = {
   title: 'Inputs types',
   component: Input
-} satisfies Meta
+}
+export default meta
 
 const DefaultInput: StoryFn = (arg) => <Input placeholder='Enter your email' {...arg}/>
 
