@@ -1,5 +1,5 @@
 import type { StoryFn, Meta } from '@storybook/react'
-import Attachment from './Attachment'
+import { Attachment } from './Attachment'
 
 const meta: Meta<typeof Attachment> = {
   title: 'Attachment',

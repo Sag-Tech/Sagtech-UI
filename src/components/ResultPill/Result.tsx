@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../styles/globals.css'
-import CardWrapper from '../CardWrapper/Wrapper/CardWrapper'
-import Typography from '../Typo/Typography'
+import { CardWrapper } from '../CardWrapper/Wrapper/CardWrapper'
+import { Typography } from '../Typo/Typography'
 
 interface ResultProps {
   title?: string
@@ -9,7 +9,7 @@ interface ResultProps {
   classes?: string
 }
 
-const Result: React.FC<ResultProps> = ({ title = 'Some txt', info, classes }) => {
+export const Result: React.FC<ResultProps> = ({ title = 'Some txt', info, classes }) => {
   return (
     <CardWrapper
       stoke="1"
@@ -33,5 +33,3 @@ const Result: React.FC<ResultProps> = ({ title = 'Some txt', info, classes }) =>
     </CardWrapper>
   )
 }
-
-export default Result

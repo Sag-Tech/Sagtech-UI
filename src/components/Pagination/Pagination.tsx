@@ -14,7 +14,7 @@ interface PaginationType extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButt
   arrowPosition?: 'left' | 'right'
 }
 
-const Pagination: React.FC<PaginationType> = ({
+export const Pagination: React.FC<PaginationType> = ({
   text,
   state,
   disabled,
@@ -64,5 +64,3 @@ const Pagination: React.FC<PaginationType> = ({
     </button>
   )
 }
-
-export default Pagination

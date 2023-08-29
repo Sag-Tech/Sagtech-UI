@@ -6,7 +6,7 @@ interface ModalProps {
   toggle?: () => void
 }
 
-const Modal: React.FC<ModalProps> = ({ children, isOpen, toggle }) => {
+export const Modal: React.FC<ModalProps> = ({ children, isOpen, toggle }) => {
   if (!isOpen) {
     return null
   }
@@ -36,5 +36,3 @@ const Modal: React.FC<ModalProps> = ({ children, isOpen, toggle }) => {
     </div>
   )
 }
-
-export default Modal

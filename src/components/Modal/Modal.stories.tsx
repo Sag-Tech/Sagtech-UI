@@ -1,5 +1,5 @@
 import { type Meta, type StoryFn } from '@storybook/react'
-import Modal from './Modal'
+import { Modal } from './Modal'
 import { ModalContext, ModalContextProvider } from 'src/context/ModalContext'
 import { useContext } from 'react'
 

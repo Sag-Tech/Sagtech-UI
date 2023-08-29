@@ -27,7 +27,7 @@ const DropdownIndicator = (props: DropdownIndicatorProps): JSX.Element => {
   )
 }
 
-const SelectComponent: React.FC<CustomSelectProps> = ({ state, errorText, labelText, options, disabled, isMenuOpen, onMenuToggle }) => {
+export const SelectComponent: React.FC<CustomSelectProps> = ({ state, errorText, labelText, options, disabled, isMenuOpen, onMenuToggle }) => {
   const customStyles = getCustomStyles(state as 'default' | 'active' | 'error')
 
   const errorCheck = useMemo(() => {
@@ -54,5 +54,3 @@ const SelectComponent: React.FC<CustomSelectProps> = ({ state, errorText, labelT
       </div>
   )
 }
-
-export default SelectComponent

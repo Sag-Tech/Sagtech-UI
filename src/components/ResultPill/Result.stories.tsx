@@ -1,5 +1,5 @@
 import type { StoryFn, Meta } from '@storybook/react'
-import Result from './Result'
+import { Result } from './Result'
 
 const meta: Meta<typeof Result> = {
   title: 'Result',

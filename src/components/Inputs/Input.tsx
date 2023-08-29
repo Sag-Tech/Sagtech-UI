@@ -13,7 +13,7 @@ interface InputTypes extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
   inputClasses?: string
 }
 
-const Input: React.FC<InputTypes> = ({
+export const Input: React.FC<InputTypes> = ({
   state = 'default',
   value,
   label,
@@ -59,5 +59,3 @@ const Input: React.FC<InputTypes> = ({
     </>
   )
 }
-
-export default Input

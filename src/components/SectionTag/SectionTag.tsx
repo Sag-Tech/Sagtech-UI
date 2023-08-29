@@ -8,7 +8,7 @@ interface SectionTagTypes {
   size?: VariantTypoSize
   children?: React.ReactNode
 }
-const SectionTag: React.FC<SectionTagTypes> = ({ className, size = 'small', children }) => {
+export const SectionTag: React.FC<SectionTagTypes> = ({ className, size = 'small', children }) => {
   const classes = useMemo(
     () =>
       classnames(
@@ -33,4 +33,3 @@ const SectionTag: React.FC<SectionTagTypes> = ({ className, size = 'small', chil
     </div>
   )
 }
-export default SectionTag

@@ -13,7 +13,7 @@ interface AnimateType
   text?: string
 }
 
-const AnimationButton: React.FC<AnimateType> = ({
+export const AnimationButton: React.FC<AnimateType> = ({
   text = 'Some txt',
   ...rest
 }) => {
@@ -37,5 +37,3 @@ const AnimationButton: React.FC<AnimateType> = ({
 
   )
 }
-
-export default AnimationButton

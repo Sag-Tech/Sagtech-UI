@@ -1,5 +1,5 @@
 import { type Meta, type StoryFn } from '@storybook/react'
-import TextArea from './TextArea'
+import { TextArea } from './TextArea'
 
 export default {
   title: 'Textarea types',

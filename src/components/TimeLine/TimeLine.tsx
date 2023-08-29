@@ -16,7 +16,7 @@ interface TimeLineProps {
   children?: React.ReactNode
 }
 
-const TimeLine: React.FC<TimeLineProps> = ({ data, imgName, classes, children }) => {
+export const TimeLine: React.FC<TimeLineProps> = ({ data, imgName, classes, children }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const information = useMemo(() => {
@@ -86,5 +86,3 @@ const TimeLine: React.FC<TimeLineProps> = ({ data, imgName, classes, children })
     </>
   )
 }
-
-export default TimeLine

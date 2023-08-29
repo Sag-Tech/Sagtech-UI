@@ -1,5 +1,5 @@
 import type { StoryFn, Meta } from '@storybook/react'
-import AnimationButton from './AnimationButton'
+import { AnimationButton } from './AnimationButton'
 
 const meta: Meta<typeof AnimationButton> = {
   title: 'Animate Buttons',

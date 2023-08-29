@@ -1,6 +1,6 @@
-import Typography from '../Typo/Typography'
+import { Typography } from '../Typo/Typography'
 import { type StoryFn, type Meta } from '@storybook/react'
-import SectionTag from './SectionTag'
+import { SectionTag } from './SectionTag'
 
 const meta: Meta<typeof SectionTag> = {
   title: 'SectionTag',

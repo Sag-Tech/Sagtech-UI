@@ -1,5 +1,5 @@
 import { type Meta, type StoryFn } from '@storybook/react'
-import Timeline from './TimeLine'
+import { TimeLine } from './TimeLine'
 
 const info = [
   {
@@ -26,16 +26,16 @@ const images = ['animation-one', 'animation-two', 'animation-three', 'animation-
 
 export default {
   title: 'TimeLine',
-  component: Timeline
+  component: TimeLine
 } satisfies Meta
 
 const TimeLineDefault: StoryFn = (arg) => {
   return (
-    <Timeline imgName={images} {...arg}>
+    <TimeLine imgName={images} {...arg}>
         {images.map((imageName, index) => (
         <img key={index} src={`img/animationImg/${imageName}.png`} alt={imageName} />
         ))}
-    </Timeline>
+    </TimeLine>
   )
 }
 

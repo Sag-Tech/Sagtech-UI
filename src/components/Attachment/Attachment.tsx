@@ -14,7 +14,7 @@ interface AttachmentTypes extends DetailedHTMLProps<InputHTMLAttributes<HTMLInpu
   multiple?: boolean
 }
 
-const Attachment: React.FC<AttachmentTypes> = ({
+export const Attachment: React.FC<AttachmentTypes> = ({
   state,
   accept,
   children,
@@ -116,5 +116,3 @@ const Attachment: React.FC<AttachmentTypes> = ({
     </div>
   )
 }
-
-export default Attachment
