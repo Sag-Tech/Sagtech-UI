@@ -1,9 +1,9 @@
 import React, { type MouseEventHandler, useMemo, type ButtonHTMLAttributes, type DetailedHTMLProps } from 'react'
 import '../../styles/globals.css'
-import { Icon } from '@components/IconComponent/Icon'
+import { Icon } from '../IconComponent/Icon'
 import useButtonStyles from './useButtonStyles/useButtonStyles'
-import { type VariantTypoTagsStyles } from '@components/Typo/types'
-import Typography from '@components/Typo/Typography'
+import { type VariantTypoTagsStyles } from '../Typo/types'
+import Typography from '../Typo/Typography'
 
 export interface ButtonTypes extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   loadingType?: boolean

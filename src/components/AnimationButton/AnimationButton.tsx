@@ -3,7 +3,7 @@ import React, {
   type DetailedHTMLProps
 } from 'react'
 import '../../styles/globals.css'
-import { Icon } from '@components/IconComponent/Icon'
+import { Icon } from '../IconComponent/Icon'
 
 interface AnimateType
   extends DetailedHTMLProps<

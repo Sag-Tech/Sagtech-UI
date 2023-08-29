@@ -1,8 +1,19 @@
 {
   "name": "@sagtech/common-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "src/index.tsx",
   "description": "common-components",
+  "license": "MIT",
+  "repository": "https://github.com/Sag-Tech/Sagtech-UI",
+  "bugs": "https://github.com/Sag-Tech/Sagtech-UI/issues",
+  "homepage": "https://sagtech.io/",
+  "keywords": [
+    "sagtech",
+    "common components",
+    "typescript",
+    "component library",
+    "tailwind"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "rollup -c --bundleConfigAsCjs",

@@ -4,7 +4,7 @@ import React, {
   type DetailedHTMLProps
 } from 'react'
 import '../../styles/globals.css'
-import { Icon } from '@components/IconComponent/Icon'
+import { Icon } from '../IconComponent/Icon'
 import paginationConsts from './PaginationConst/PaginationConst'
 import classNames from 'classnames'
 

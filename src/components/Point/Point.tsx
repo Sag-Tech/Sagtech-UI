@@ -1,5 +1,5 @@
-import { type VariantTypoTagsStyles } from '@components/Typo/types'
-import Typography from '@components/Typo/Typography'
+import { type VariantTypoTagsStyles } from '../Typo/types'
+import Typography from '../Typo/Typography'
 import classnames from 'classnames'
 import React from 'react'
 import type {
