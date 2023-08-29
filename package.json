@@ -1,6 +1,6 @@
 {
   "name": "@sagtech/common-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "src/index.tsx",
   "description": "common-components",
   "scripts": {
@@ -8,12 +8,10 @@
     "build": "rollup -c --bundleConfigAsCjs",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "test:coverage-report": "./coverage-report.sh",
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "postinstall": "chmod +x coverage-check.sh && chmod +x coverage-report.sh"
+    "build-storybook": "storybook build"
   },
   "browserslist": {
     "production": [
@@ -112,8 +110,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "eslint --quiet --fix",
-      "./coverage-check.sh"
+      "eslint --quiet --fix"
     ]
   }
 }
