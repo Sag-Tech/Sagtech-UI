@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function Docker ({ color, ...rest }: IAttachIconProps) {
+export default function Docker ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="41"

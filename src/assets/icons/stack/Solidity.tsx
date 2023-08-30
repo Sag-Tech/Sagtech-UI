@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function Solidity ({ color, ...rest }: IAttachIconProps) {
+export default function Solidity ({  ...rest }: IAttachIconProps) {
   return (
     <svg
       width="41"

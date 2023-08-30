@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
-import TextArea from './TextArea'
+import TextArea from './Textarea'
 
 const onChange = jest.fn()
 

@@ -8,9 +8,9 @@
   },
   "ignorePatterns": [
     "jest.config.js",
-    "rollup.config.js",
+    "esbuild.config.js",
     "postcss.config.js",
-    "common-components"
+    "build.js"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["react", "@typescript-eslint"],
@@ -24,7 +24,6 @@
   },
   "extends": [
     "plugin:react/recommended",
-    "standard-with-typescript",
     "plugin:@typescript-eslint/recommended",
     "plugin:storybook/recommended"
   ],

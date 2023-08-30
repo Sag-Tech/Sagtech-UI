@@ -1,6 +1,6 @@
 import React, { type TextareaHTMLAttributes, type DetailedHTMLProps, useMemo } from 'react'
 import '../../styles/globals.css'
-import textareaConsts from './TextAreaConsts/textarea'
+import textareaConsts from './TextareaConsts/textarea'
 import classNames from 'classnames'
 
 interface TextAreaProps extends DetailedHTMLProps<TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement> {
@@ -11,7 +11,7 @@ interface TextAreaProps extends DetailedHTMLProps<TextareaHTMLAttributes<HTMLTex
   isError?: boolean
 }
 
-const TextArea: React.FC<TextAreaProps> = ({ state, value, classes, isError, disabled, errorMessage, ...rest }) => {
+const TextArea: React.FC<TextAreaProps> = ({ state, classes, isError, disabled, errorMessage, ...rest }) => {
   const textareaStyles = useMemo(
     () => classNames({
       [textareaConsts.basicStyles]: true,

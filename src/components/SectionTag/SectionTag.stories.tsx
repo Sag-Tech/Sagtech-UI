@@ -1,4 +1,4 @@
-import Typography from '../Typo/Typography'
+import Typography from '../Typography/Typography'
 import { type StoryFn, type Meta } from '@storybook/react'
 import SectionTag from './SectionTag'
 

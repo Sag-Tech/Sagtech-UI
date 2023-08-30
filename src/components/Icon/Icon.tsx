@@ -3,7 +3,7 @@ import React from 'react'
 import type { SVGProps } from 'react'
 import { content } from '../../assets/icons'
 import type { IAvailableIcons } from '../../assets/icons'
-import Typography from '../Typo/Typography'
+import Typography from '../Typography/Typography'
 
 export interface IIconProps {
   svgProps?: SVGProps<SVGSVGElement>

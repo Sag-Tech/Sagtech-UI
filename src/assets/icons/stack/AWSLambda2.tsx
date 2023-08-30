@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function AWSLambda2 ({ color, ...rest }: IAttachIconProps) {
+export default function AWSLambda2({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="41"

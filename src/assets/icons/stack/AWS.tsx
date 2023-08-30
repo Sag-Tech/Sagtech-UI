@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function AWS ({ color, ...rest }: IAttachIconProps) {
+export default function AWS ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="41"

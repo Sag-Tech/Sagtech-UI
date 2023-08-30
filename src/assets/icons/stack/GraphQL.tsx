@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function GraphQL ({ color, ...rest }: IAttachIconProps) {
+export default function GraphQL ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="41"

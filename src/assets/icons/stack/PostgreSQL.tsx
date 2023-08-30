@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function PostgreSQL ({ color, ...rest }: IAttachIconProps) {
+export default function PostgreSQL ({  ...rest }: IAttachIconProps) {
   return (
     <svg
       width="41"

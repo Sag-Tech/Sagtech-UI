@@ -6,7 +6,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function Android ({ color, ...rest }: IAttachIconProps) {
+export default function Android ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="41"

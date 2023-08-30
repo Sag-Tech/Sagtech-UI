@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function Kotlin ({ color, ...rest }: IAttachIconProps) {
+export default function Kotlin ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="40"

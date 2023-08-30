@@ -4,7 +4,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function Chevrondown ({ color, ...rest }: IAttachIconProps) {
+export default function Chevrondown ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="24"

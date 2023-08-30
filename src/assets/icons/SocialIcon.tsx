@@ -4,7 +4,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function SocilaIcon ({ color, ...rest }: IAttachIconProps) {
+export default function SocilaIcon ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

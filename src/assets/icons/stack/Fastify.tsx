@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function Fastify ({ color, ...rest }: IAttachIconProps) {
+export default function Fastify ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="41"

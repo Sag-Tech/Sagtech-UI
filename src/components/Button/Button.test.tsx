@@ -1,7 +1,7 @@
 import { fireEvent, render } from '@testing-library/react'
 
 import Button from './Button'
-import { type IIconProps } from '@components/IconComponent/Icon'
+import { type IIconProps } from '@components/Icon/Icon'
 
 jest.mock('@components/IconComponent/Icon', () => ({
   Icon: (props: IIconProps) => <div data-tid='icon' {...props}/>

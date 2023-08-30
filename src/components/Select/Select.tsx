@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import Select, { components, type DropdownIndicatorProps } from 'react-select'
 import '../../styles/globals.css'
-import Icon from '../IconComponent/Icon'
+import Icon from '../Icon/Icon'
 import getCustomStyles from './CustomStyles/customStyles'
 
 export interface Option {

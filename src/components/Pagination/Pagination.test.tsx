@@ -2,7 +2,7 @@ import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
 import Pagination from './Pagination'
-import { type IIconProps } from '@components/IconComponent/Icon'
+import { type IIconProps } from '@components/Icon/Icon'
 
 jest.mock('@components/IconComponent/Icon', () => ({
   Icon: (props: IIconProps) => <div data-tid="icon" {...props}/>

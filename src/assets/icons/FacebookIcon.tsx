@@ -4,7 +4,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function FacebookIcon ({ color, ...rest }: IAttachIconProps) {
+export default function FacebookIcon ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="32"

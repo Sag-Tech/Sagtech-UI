@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function PyTorch ({ color, ...rest }: IAttachIconProps) {
+export default function PyTorch ({  ...rest }: IAttachIconProps) {
   return (
     <svg
       width="41"

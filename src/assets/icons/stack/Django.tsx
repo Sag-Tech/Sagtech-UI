@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function Django ({ color, ...rest }: IAttachIconProps) {
+export default function Django ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="41"

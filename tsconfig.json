@@ -7,6 +7,8 @@
       "esnext"
     ],
     "allowJs": true,
+    "declaration": true,
+    "outDir": "./dist/types",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -16,7 +18,6 @@
     "resolveJsonModule": true,
     "strictNullChecks": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
     "alwaysStrict": true,
@@ -46,14 +47,17 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "jest.setup.js",
-    "tailwind.config.js",
-    "postcss.config.js",
-    "craco.config.js", 
    ],
-  "exclude": [
+   "exclude": [
     "node_modules",
-    "**/*.spec.ts",
-    "**/*.test.ts",
+    "**/__tests__/*",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.storybook.ts",
+    "src/**/*.storybook.tsx",
+    "jest.config.js",
+    "postcss.config.js",
+    "tailwind.config.js",
+    "esbuild.config.js"
   ]
 }

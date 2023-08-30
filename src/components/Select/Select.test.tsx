@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 
-import SelectComponent from './SelectComponent'
-import { type IIconProps } from '@components/IconComponent/Icon'
+import SelectComponent from './Select'
+import { type IIconProps } from '@components/Icon/Icon'
 
 jest.mock('@components/IconComponent/Icon', () => ({
   Icon: (props: IIconProps) => <div data-tid="icon" {...props}/>

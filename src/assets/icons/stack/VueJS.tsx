@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function VueJS ({ color, ...rest }: IAttachIconProps) {
+export default function VueJS ({  ...rest }: IAttachIconProps) {
   return (
     <svg
       width="40"

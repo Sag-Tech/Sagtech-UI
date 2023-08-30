@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../styles/globals.css'
-import CardWrapper from '../CardWrapper/Wrapper/CardWrapper'
-import Typography from '../Typo/Typography'
+import CardWrapper from '../CardWrapper/CardWrapper'
+import Typography from '../Typography/Typography'
 
 interface ResultProps {
   title?: string

@@ -7,16 +7,15 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/preset-create-react-app",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
   ],
   framework: {
     name: "@storybook/react-webpack5",
-    options: {}
+    options: {},
   },
   docs: {
-    autodocs: "tag"
+    autodocs: "tag",
   },
-  staticDirs: ["../public"],
 
   webpackFinal: async (config) => {
     config.resolve = config.resolve || {};
@@ -24,10 +23,10 @@ const config: StorybookConfig = {
     config.resolve.plugins = [
       ...(config.resolve.plugins || []),
       new TsconfigPathsPlugin({
-        extensions: config.resolve.extensions
-      })
+        extensions: config.resolve.extensions,
+      }),
     ];
     return config;
-  }
+  },
 };
 export default config;

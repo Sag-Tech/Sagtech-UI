@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function MySQL ({ color, ...rest }: IAttachIconProps) {
+export default function MySQL ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="41"

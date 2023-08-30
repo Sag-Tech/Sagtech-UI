@@ -1,25 +1,43 @@
-export * from './AnimationButton/AnimationButton'
-export * from './Attachment/Attachment'
-export * from './Button/Button'
-// TODO: rename
-export * from './Typo/Typography'
-// TODO: rename
-export * from './IconComponent/Icon'
-// TODO: rename
-export * from './Inputs/Input'
-export * from './Modal/Modal'
-export * from './Notification/Notification'
-export * from './Pagination/Pagination'
-// TODO: rename
-export * from './Select/SelectComponent'
-// TODO: rename
-export * from './Textarea/TextArea'
-export * from './types'
-export * from './CardWrapper/Wrapper/CardWrapper'
-export * from './DonutChart/DonutChart'
-export * from './LineChart/LineChart'
-export * from './Point/Point'
-export * from './ResultPill/Result'
-export * from './SectionTag/SectionTag'
-export * from './TimeLine/TimeLine'
-export * from './AvatarCard/AvatarCard'
+import AnimationButton from "./AnimationButton/AnimationButton";
+import Attachment from "./Attachment/Attachment";
+import Button from "./Button/Button";
+import Typography from "./Typography/Typography";
+import Icon from "./Icon/Icon";
+import Input from "./Input/Input";
+import Modal from "./Modal/Modal";
+import Notification from "./Notification/Notification";
+import Pagination from "./Pagination/Pagination";
+import Select from "./Select/Select";
+import Textarea from "./Textarea/Textarea";
+import CardWrapper from "./CardWrapper/CardWrapper";
+import DonutChart from "./DonutChart/DonutChart";
+import LineChart from "./LineChart/LineChart";
+import Point from "./Point/Point";
+import Result from "./Result/Result";
+import SectionTag from "./SectionTag/SectionTag";
+import TimeLine from "./TimeLine/TimeLine";
+import AvatarCard from "./AvatarCard/AvatarCard";
+
+export * from "./types";
+
+export {
+  AnimationButton,
+  Attachment,
+  Button,
+  Typography,
+  Icon,
+  Input,
+  Modal,
+  Notification,
+  Pagination,
+  Select,
+  Textarea,
+  CardWrapper,
+  DonutChart,
+  LineChart,
+  Point,
+  Result,
+  SectionTag,
+  TimeLine,
+  AvatarCard,
+};

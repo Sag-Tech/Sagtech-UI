@@ -4,7 +4,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function Project ({ color, ...rest }: IAttachIconProps) {
+export default function Project ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="24"

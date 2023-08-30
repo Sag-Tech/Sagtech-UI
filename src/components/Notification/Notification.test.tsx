@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import { type IIconProps } from '@components/IconComponent/Icon'
+import { type IIconProps } from '@components/Icon/Icon'
 import Notification from './Notification'
 
 jest.mock('@components/IconComponent/Icon', () => ({

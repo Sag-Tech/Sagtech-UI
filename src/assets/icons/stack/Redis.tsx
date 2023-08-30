@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function Redis ({ color, ...rest }: IAttachIconProps) {
+export default function Redis ({  ...rest }: IAttachIconProps) {
   return (
     <svg
       width="41"

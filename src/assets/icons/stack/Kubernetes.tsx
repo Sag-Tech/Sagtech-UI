@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function Kubernetes ({ color, ...rest }: IAttachIconProps) {
+export default function Kubernetes ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="41"

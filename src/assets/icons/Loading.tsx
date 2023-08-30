@@ -4,7 +4,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function Loading ({ color, ...rest }: IAttachIconProps) {
+export default function Loading ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="24"

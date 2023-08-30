@@ -1,0 +1,43 @@
+# Ignore configuration and miscellaneous files
+.eslintrc.js
+.prettierrc.js
+.jest.config.js
+.jest.setup.js
+.gitignore
+.eslintignore,
+tailwind.config.js
+postcss.config.js
+.babelrc
+.esbuild.config.js
+tsconfig.json
+build.js
+
+# Storybook configurations
+.storybook/
+*.stories.tsx
+*.stories.js
+storybook-static
+
+# Tests
+__tests__/
+*.test.tsx
+*.test.js
+*.spec.tsx
+*.spec.js
+
+# Source maps (If you generate them)
+*.map
+
+# Editor specific
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Node modules
+node_modules/
+
+# Code
+src

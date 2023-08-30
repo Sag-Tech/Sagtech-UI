@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function MongoDB ({ color, ...rest }: IAttachIconProps) {
+export default function MongoDB ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="41"

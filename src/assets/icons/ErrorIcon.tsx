@@ -4,7 +4,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function ErrorIcon ({ color, ...rest }: IAttachIconProps) {
+export default function ErrorIcon ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="24"

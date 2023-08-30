@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function Flutter ({ color, ...rest }: IAttachIconProps) {
+export default function Flutter ({ ...rest }: IAttachIconProps) {
   return (
     <svg
       width="41"

@@ -5,7 +5,7 @@ interface IAttachIconProps extends SVGProps<SVGSVGElement> {
   color: string
 }
 
-export default function TensorFlow ({ color, ...rest }: IAttachIconProps) {
+export default function TensorFlow ({  ...rest }: IAttachIconProps) {
   return (
     <svg
       width="41"

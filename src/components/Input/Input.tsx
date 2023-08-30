@@ -1,6 +1,6 @@
 import React, { type InputHTMLAttributes, type DetailedHTMLProps, useMemo } from 'react'
 import '../../styles/globals.css'
-import inputConsts from './InputsConsts/inputConsts'
+import InputConsts from './InputConsts'
 import classNames from 'classnames'
 
 interface InputTypes extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
@@ -15,7 +15,6 @@ interface InputTypes extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 
 const Input: React.FC<InputTypes> = ({
   state = 'default',
-  value,
   label,
   errorMessage,
   classes,
@@ -26,12 +25,12 @@ const Input: React.FC<InputTypes> = ({
 }) => {
   const inputStyles = useMemo(
     () => classNames({
-      [inputConsts.basicStyles]: true,
-      [inputConsts.disabledInput]: true,
-      [inputConsts.defaultBorder]: state === 'default' && !isError,
-      [inputConsts.defaultStyles]: state === 'default' && !isError,
-      [inputConsts.activeInput]: state === 'active' && !isError,
-      [inputConsts.errorInput]: isError
+      [InputConsts.basicStyles]: true,
+      [InputConsts.disabledInput]: true,
+      [InputConsts.defaultBorder]: state === 'default' && !isError,
+      [InputConsts.defaultStyles]: state === 'default' && !isError,
+      [InputConsts.activeInput]: state === 'active' && !isError,
+      [InputConsts.errorInput]: isError
     }),
     [isError, state]
   )

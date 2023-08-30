@@ -1,6 +1,6 @@
 import React, { type MouseEventHandler } from 'react'
 import '../../styles/globals.css'
-import Icon from '../IconComponent/Icon'
+import Icon from '../Icon/Icon'
 import Button from '../Button/Button'
 import notificationConsts from './NotificationConsts/notificationConsts'
 import classNames from 'classnames'
