@@ -4,7 +4,7 @@
   "module": "dist/bundle.esm.js",
   "typings": "dist/types/index.d.ts",
   "sideEffects": false,
-  "version": "0.1.4",
+  "version": "0.1.2",
   "description": "Components from SagTech team",
   "files": [
     "dist"
