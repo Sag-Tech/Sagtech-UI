@@ -22,6 +22,12 @@ npm install sagtech-ui
 yarn add sagtech-ui
 ```
 
+Import stylesheets into the App.js or App.tsx
+
+```javascript
+import 'sagtech-ui/dist/bundle.esm.css';
+```
+
 ## Getting started with Sagtech UI
 
 ### AnimationButton Component
