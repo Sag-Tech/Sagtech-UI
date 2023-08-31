@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://sagtech.io" rel="noopener" target="_blank"><img width="50" src="/public/logo.svg" alt="sagtech logo"></a>
+  <a href="https://sagtech.io" rel="noopener" target="_blank"><img width="100" src="/public/logo.svg" alt="sagtech logo"></a>
 </p>
 
 <h1 align="center">Sagtech-UI</h1>
@@ -22,12 +22,11 @@ npm install sagtech-components
 yarn add @sagtech/common-components
 ```
 
-**Note:** `@next` only points to pre-releases.
-Use `@latest` for the latest stable release.
-
 ## Getting started with Sagtech UI
 
 ### AnimationButton Component
+
+![chrome_XjQjgS56qh](https://github.com/Sag-Tech/Sagtech-UI/assets/95652563/1f39ce7e-b2b6-424c-8ed5-b3ac90f08a7c)
 
 ```javascript
 import { AnimationButton } from "sagtech-components";
