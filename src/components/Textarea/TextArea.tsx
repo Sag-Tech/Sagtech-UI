@@ -1,6 +1,6 @@
 import React, { type TextareaHTMLAttributes, type DetailedHTMLProps, useMemo } from 'react'
 import '../../styles/globals.css'
-import textareaConsts from './TextareaConsts/textarea'
+import textareaConsts from './TextAreaConsts/textarea'
 import classNames from 'classnames'
 
 interface TextAreaProps extends DetailedHTMLProps<TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement> {

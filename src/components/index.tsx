@@ -8,7 +8,7 @@ import Modal from "./Modal/Modal";
 import Notification from "./Notification/Notification";
 import Pagination from "./Pagination/Pagination";
 import Select from "./Select/Select";
-import Textarea from "./Textarea/Textarea";
+import TextArea from "./Textarea/TextArea";
 import CardWrapper from "./CardWrapper/CardWrapper";
 import DonutChart from "./DonutChart/DonutChart";
 import LineChart from "./LineChart/LineChart";
@@ -31,7 +31,7 @@ export {
   Notification,
   Pagination,
   Select,
-  Textarea,
+  TextArea,
   CardWrapper,
   DonutChart,
   LineChart,
