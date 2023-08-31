@@ -8,18 +8,18 @@ Welcome to the **sagtech-ui** design repository! Dive into an ocean of meticulou
 
 ## Installation
 
-Sagtech UI is available as an [npm package](https://www.npmjs.com/package/sagtech-components).
+Sagtech UI is available as an [npm package](https://www.npmjs.com/package/sagtech-ui).
 
 **npm:**
 
 ```bash
-npm install sagtech-components
+npm install sagtech-ui
 ```
 
 **yarn:**
 
 ```bash
-yarn add @sagtech/common-components
+yarn add sagtech-ui
 ```
 
 ## Getting started with Sagtech UI
