@@ -1,5 +1,5 @@
 {
-  "name": "sagtech-ui",
+  "name": "@sagtech/sagtech-ui",
   "main": "dist/bundle.esm.js",
   "module": "dist/bundle.esm.js",
   "typings": "dist/types/index.d.ts",
@@ -22,7 +22,7 @@
   ],
   "scripts": {
     "start": "react-scripts start",
-    "build": "NODE_ENV=production node build.js",
+    "build": "cross-env NODE_ENV=production node build.js",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "eject": "react-scripts eject",
@@ -41,6 +41,8 @@
   "dependencies": {
     "@chialab/esbuild-plugin-postcss": "^0.17.2",
     "apexcharts": "^3.41.0",
+    "cross-env": "^7.0.3",
+    "esbuild-style-plugin": "^1.6.2",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.1",
     "react-dom": "^18.2.0",
