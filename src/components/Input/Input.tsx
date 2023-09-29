@@ -16,6 +16,7 @@ interface InputTypes extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 const Input: React.FC<InputTypes> = ({
   state = 'default',
   label,
+  value,
   errorMessage,
   classes,
   disabled,
@@ -45,6 +46,7 @@ const Input: React.FC<InputTypes> = ({
           </span>
         )}
         <input
+          value={value}
           className={`${inputStyles} ${inputClasses !== undefined ? inputClasses : ''}`}
           disabled={disabled}
           {...rest}

@@ -40,7 +40,7 @@ const Notification: React.FC<NotificationTypes> = ({
   return (
     <div
       role="contentinfo"
-      className={`${allStyles} pointer-events-auto h-[196px] w-[359px] sm:h-[172px] sm:w-[392px]`}
+      className={`${allStyles} pointer-events-auto h-full w-[359px] sm:w-[392px]`}
     >
       <div className="mr-16px">
         <Icon icon={state} color={color} />
