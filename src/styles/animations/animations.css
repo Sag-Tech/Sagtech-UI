@@ -29,8 +29,8 @@
         transform: scale(1);
     }
   }
-  .animation {
-    width: 0px;
+/*   .animation {
+    width: 100%;
     overflow: hidden;
     transition: width 0.1s ease;
   }
@@ -60,7 +60,7 @@
     padding-left: 24px;
     max-width: 350px;
     transition:max-width 0.75s ease-in-out;
-  }
+  } */
   
   @keyframes slide-down {
     from {
@@ -78,38 +78,40 @@
   }
 }
 .animation {
-  width: 0px;
+  max-width: 0px;
   overflow: hidden;
-  transition: width 0.1s ease;
+  transition: max-width 0.8s ease-out;
 }
 .buttonAnim:hover .animation,
 .burgerLink:hover .buttonAnim .animation {
-  width: 100%;
-  transition: width 0.9s ease-in-out;
+  max-width: 350px;
+  transition: max-width 1.2s ease-in;
 }
 
 .buttonAnim:hover .iconStyles,
  .burgerLink:hover .buttonAnim .iconStyles {
   padding-left: 16px;
+  transition:padding 1s ease-in-out;
 } 
 
 .iconStyles{
   padding-left: 0px;
+  transition:padding 0.8s ease-out;
 } 
 
 
 .buttonAnim {
   display: inline-flex;
   max-width: 48px;
-  transition:max-width 0.1s ease;
   padding: 8px;
+  transition:max-width 1s ease-out, padding 1s ease-in-out;
 }
 
 .buttonAnims:hover,
 .burgerLink:hover .buttonAnims{
   padding-left: 24px;
   max-width: 350px;
-  transition:max-width 0.83s ease-in-out;
+  transition:max-width 1.3s ease-out, padding 1s ease-in-out ;
 }
 
 @keyframes slide-down {
