@@ -1,5 +1,5 @@
 const esbuild = require('esbuild').default;
-const postCssPlugin = require('esbuild-style-plugin');
+const postcss2 = require('esbuild-plugin-postcss2').default;
 const { execSync } = require('child_process');
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -33,10 +33,12 @@ esbuild.build({
     '.woff2': 'file',
   },
   plugins: [
-    postCssPlugin({
-      postcss: {
-        plugins: [require('tailwindcss'), require('autoprefixer')],
-      },
+    postcss2({
+      plugins: [
+        require('tailwindcss'),
+        require('autoprefixer'),
+        ...(isProduction ? [require('cssnano')] : []),
+      ],
     }),
   ],
 })
