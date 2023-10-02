@@ -29,7 +29,8 @@
     "lint": "eslint .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "serve-storybook": "serve storybook-static"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -41,6 +42,7 @@
   "dependencies": {
     "@chialab/esbuild-plugin-postcss": "^0.17.2",
     "apexcharts": "^3.41.0",
+    "esbuild": "^0.19.4",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.1",
     "react-dom": "^18.2.0",
@@ -70,7 +72,6 @@
     "brotli-webpack-plugin": "^1.1.0",
     "classnames": "^2.3.2",
     "cssnano": "^6.0.1",
-    "esbuild": "^0.19.2",
     "esbuild-plugin-postcss2": "^0.1.2",
     "eslint": "^8.41.0",
     "eslint-plugin-storybook": "^0.6.13",
