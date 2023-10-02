@@ -13,20 +13,13 @@ Sagtech UI is available as an [npm package](https://www.npmjs.com/package/sagtec
 **npm:**
 
 ```bash
-npm install @sagtech/sagtech-ui
+npm install sagtech-ui
 ```
 
 **yarn:**
 
 ```bash
-yarn add @sagtech/sagtech-ui
-
-```
-
-Import stylesheets into the App.js or App.tsx
-
-```javascript
-import '@sagtech/sagtech-ui/dist/bundle.esm.css';
+yarn add sagtech-ui
 ```
 
 ## Getting started with Sagtech UI
@@ -36,7 +29,7 @@ import '@sagtech/sagtech-ui/dist/bundle.esm.css';
 ![chrome_XjQjgS56qh](https://github.com/Sag-Tech/Sagtech-UI/assets/95652563/1f39ce7e-b2b6-424c-8ed5-b3ac90f08a7c)
 
 ```javascript
-import { AnimationButton } from "@sagtech/sagtech-ui";
+import { AnimationButton } from "sagtech-ui";
 
 <AnimationButton text="View the project" />;
 ```
