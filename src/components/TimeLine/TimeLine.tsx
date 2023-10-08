@@ -1,5 +1,14 @@
-import React, { useMemo, useState } from "react";
-import defaultStyles from "./DefaultStyles/styles";
+/* eslint-disable no-unused-vars */
+import React, {
+  useMemo, useState, useRef, useCallback, useEffect,
+} from 'react';
+import { Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide, type SwiperRef } from 'swiper/react';
+import 'swiper/css'
+import settings from './SwiperSettings/swiper-settings';
+import defaultStyles from './DefaultStyles/styles';
+import Typography from '../Typography/Typography';
+import SliderArrow from './SwiperNavigation/SliderArrow';
 
 interface Text {
   title: string;
@@ -8,79 +17,158 @@ interface Text {
 
 interface TimeLineProps {
   data?: Text[];
-  imgName: string[];
+  imgName?: string[];
   classes?: string;
   children?: React.ReactNode;
+  isInView?: boolean;
+  onSlideChange?: (currentSlide: number) => void;
 }
 
-const TimeLine: React.FC<TimeLineProps> = ({
+export function Timeline({
   data,
   imgName,
   classes,
   children,
-}) => {
-  const [currentSlide] = useState(0);
+  isInView,
+  onSlideChange,
+}: TimeLineProps) {
+  const [dragStartX, setDragStartX] = useState(0);
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const sliderRef = useRef<SwiperRef>(null);
+
+  const handleSlideChange = (slide: number) => {
+    if (onSlideChange) {
+      onSlideChange(slide);
+      setCurrentSlide(slide)
+    }
+  };
+
+  const handleNext = useCallback(() => {
+    sliderRef?.current?.swiper.slideNext();
+  }, []);
+
+  const handlePrev = useCallback(() => {
+    sliderRef?.current?.swiper.slidePrev();
+  }, []);
+
+  const handleDragStart = (event: React.DragEvent<HTMLDivElement>) => {
+    setDragStartX(event.clientX);
+  };
+  const handleTouchStart: React.TouchEventHandler<HTMLDivElement>  = (event) => {
+    const { clientX } = event.touches[0];
+    setTouchStartX(clientX);
+  };
+
+  const handleDragEnd= (event: React.DragEvent<HTMLDivElement>) => {
+    const dragEndX = event.clientX;
+    const deltaX = dragEndX - dragStartX;
+
+    if (deltaX > 0) {
+      handlePrev();
+    } else if (deltaX < 0) {
+      handleNext();
+    }
+  };
+
+  const handleTouchEnd: React.TouchEventHandler<HTMLDivElement>  = (event) => {
+    const { clientX } = event.changedTouches[0];
+    const deltaTouchX = clientX - touchStartX;
+
+    if (deltaTouchX > 0) {
+      handlePrev();
+    } else if (deltaTouchX < 0) {
+      handleNext();
+    }
+  };
+
+  useEffect(() => {
+    if (isInView) {
+      sliderRef?.current?.swiper.autoplay.start();
+    } else if (!isInView) {
+      sliderRef?.current?.swiper.autoplay.stop();
+    }
+  }, [isInView]);
+
+  const images = useMemo(() => {
+    if (!children) return null;
+
+    return React.Children.map(children, (child, index) => (
+      <div
+        className={`${defaultStyles.coverImg} 
+         ${imgName && index === imgName.length - 1 ? 'relative' : ''} 
+          ${classes !== undefined ? classes : ''}${currentSlide === index ? 'z-[10]' : 'z-[5]'}`}
+        // eslint-disable-next-line react/no-array-index-key
+        key={index}
+      >
+        {React.cloneElement(child as React.ReactElement, {
+          className: `${defaultStyles.img}`,
+        })}
+      </div>
+    ));
+  }, [classes, imgName, children]);
 
   const information = useMemo(() => {
     if (data !== undefined) {
       return data.map((text, id) => (
-        <div key={id}>
-          <div className="relative">
-            <div className="w-[32px] rounded-50% h-[32px] bg-pr_purple flex items-center justify-center">
-              <span className="font-bold text-16 leading-28 text-white">
-                {id + 1}
-              </span>
+        <SwiperSlide key={text.title}>
+          <div>
+            <div className="relative">
+              <div className="flex h-[32px] w-[32px] items-center justify-center rounded-50% bg-pr_purple">
+                <span className="text-16 font-bold leading-28 text-white">{id + 1}</span>
+              </div>
+            </div>
+            <div className="mt-16px flex flex-col gap-8px">
+              <Typography tag="h3" color="text-white_4">
+                {text.title}
+              </Typography>
+              <Typography type="BodyM" color="text-grey_4">
+                {text.text}
+              </Typography>
             </div>
           </div>
-          <div className="mt-16px flex gap-8px flex-col">
-            <h1 className="text-28 leading-40 font-bold text-white_4 ">
-              {text.title}
-            </h1>
-            <p className="text-14 leading-28 font-medium text-grey_4">
-              {text.text}
-            </p>
-          </div>
-        </div>
+        </SwiperSlide>
       ));
     }
 
     return null;
   }, [data]);
-
-  const images = useMemo(() => {
-    if (!children) return null;
-
-    return React.Children.map(children, (child, index) => {
-      return (
-        <div
-          className={`${defaultStyles.coverImg} 
-          ${index === imgName.length - 1 ? "relative" : ""} 
-          ${index === 0 ? "first:z-[10]" : ""} 
-          ${classes !== undefined ? classes : ""}`}
-          key={index}
-        >
-          {React.cloneElement(child as React.ReactElement, {
-            className: `${defaultStyles.img} ${
-              currentSlide === index ? "fade-in" : "fade-out"
-            }`,
-          })}
-        </div>
-      );
-    });
-  }, [children, imgName, currentSlide]);
-
   return (
-    <>
-      <div>
-        <div className="relative">{images}</div>
-        <div className="relative mt-40px">
-          <div className="border-5 top-[10px] left-[2px] absolute border-solid w-full border-pr_purple" />
-
-          {information}
-        </div>
+    <div className="relative">
+      <div className="absolute 2xl:top-[-98px] top-[-80px] 2xl:right-[72px] xl:flex right-[32px] hidden gap-16px">
+        <SliderArrow onClick={handlePrev} />
+        <SliderArrow onClick={handleNext} isReversed />
       </div>
-    </>
+      <div
+        onDragStart={handleDragStart}
+        onDragEnd={handleDragEnd}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        className="relative mr-16px sm:mr-32px 2xl:mr-72px"
+      >
+        {images}
+      </div>
+      <div className="relative -mr-8px mt-40px 2xl:-mr-48px">
+        <div className="absolute left-[2px] top-[10px] w-full border-5 border-solid border-pr_purple" />
+        <Swiper
+          ref={sliderRef}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          modules={[Autoplay]}
+          speed={1800}
+          className="timeline-swiper swiper-time-line"
+          {...settings}
+          onSlideChange={(swiper: { activeIndex: number } ) => handleSlideChange(swiper.activeIndex)}
+        >
+          {information}
+        </Swiper>
+      </div>
+    </div>
   );
-};
+}
 
-export default TimeLine;
+export default Timeline;
