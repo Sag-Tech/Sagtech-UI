@@ -47,6 +47,7 @@ import Solidity from './stack/Solidity'
 import Python from './stack/Python'
 import VueJS from './stack/VueJS'
 import HistoryPoint from './HistoryPoint'
+import SliderButton from './SliderButton'
 
 export const content = {
   attach: AttachIcon,
@@ -97,7 +98,8 @@ export const content = {
   Solidity,
   Python,
   VueJS,
-  HistoryPoint
+  HistoryPoint,
+  button: SliderButton,
 }
 
 export type IAvailableIcons = keyof typeof content
