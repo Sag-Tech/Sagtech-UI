@@ -1,0 +1,6 @@
+services:
+  nginx:
+    build: .
+    restart: unless-stopped
+    ports:
+      - 4000:3000
